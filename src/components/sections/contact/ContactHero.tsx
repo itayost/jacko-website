@@ -1,37 +1,37 @@
-// src/components/sections/about/AboutHero.tsx
+// src/components/sections/contact/ContactHero.tsx
 'use client'
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 
-interface AboutHeroProps {
+interface ContactHeroProps {
   backgroundImage?: string
   title?: string
   subtitle?: string
 }
 
-export default function AboutHero({ 
-  backgroundImage = '/images/hero/about-hero.jpg',
-  title = 'הסיפור שלנו',
-  subtitle = 'מסורת של איכות, טעם וחוויה קולינרית מאז 1973'
-}: AboutHeroProps) {
+export default function ContactHero({ 
+  backgroundImage = '/images/hero/contact-hero.jpg',
+  title = 'צור קשר',
+  subtitle = 'נשמח לארח אתכם ולעמוד לשירותכם'
+}: ContactHeroProps) {
   return (
     <section className="relative h-[420px] md:h-[520px] flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
           src={backgroundImage}
-          alt="About Hero Background"
+          alt="Contact Hero Background"
           fill
           className="object-cover"
           priority
           sizes="100vw"
         />
         
-        {/* Top subtle darkening for better text readability */}
+        {/* Top subtle darkening */}
         <div className="absolute inset-0 bg-black/20" />
         
-        {/* Bottom gradient - similar to your reference image */}
+        {/* Bottom gradient */}
         <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-blue-primary/90 via-blue-primary/50 to-transparent" />
       </div>
 
