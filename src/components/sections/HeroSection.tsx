@@ -122,9 +122,6 @@ const HeroSection = () => {
               transform: `translateY(${offsetY * 0.1}px)`
             }}
           >
-            <span className="inline-block bg-yellow-accent text-black px-8 py-3 rounded-full font-bold text-lg shadow-lg">
-              מאז 1973
-            </span>
           </motion.div>
 
           {/* Call to Action Buttons */}
