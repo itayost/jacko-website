@@ -57,7 +57,7 @@ export default function Gallery() {
   }
 
   return (
-    <section className="py-16">
+    <section className="py-16 bg-blue-primary">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -66,8 +66,8 @@ export default function Gallery() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl font-bold text-black mb-4">גלריה</h2>
-          <p className="text-lg text-gray-600 mb-8">רגעים וטעמים מהמסעדה שלנו</p>
+          <h2 className="text-3xl font-bold text-white mb-4">גלריה</h2>
+          <p className="text-lg text-white/80 mb-8">רגעים וטעמים מהמסעדה שלנו</p>
           
           {/* Category Filter */}
           <div className="flex justify-center gap-4 flex-wrap">
@@ -77,8 +77,8 @@ export default function Gallery() {
                 onClick={() => setSelectedCategory(category.id)}
                 className={`px-6 py-2 rounded-full font-medium transition-all ${
                   selectedCategory === category.id
-                    ? 'bg-blue-primary text-white'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    ? 'bg-yellow-accent text-black shadow-lg'
+                    : 'bg-white/90 text-blue-primary hover:bg-white'
                 }`}
               >
                 {category.label}
@@ -97,7 +97,7 @@ export default function Gallery() {
               transition={{ duration: 0.5, delay: index * 0.05 }}
               viewport={{ once: true }}
               onClick={() => openLightbox(index)}
-              className="relative aspect-square bg-gray-200 rounded-2xl overflow-hidden cursor-pointer group"
+              className="relative aspect-square bg-white/10 rounded-2xl overflow-hidden cursor-pointer group shadow-lg hover:shadow-xl"
             >
               <Image
                 src={image.src}
@@ -106,8 +106,8 @@ export default function Gallery() {
                 className="object-cover group-hover:scale-110 transition-transform duration-300"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <p className="absolute bottom-4 right-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <p className="absolute bottom-4 right-4 text-white font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 drop-shadow-lg">
                 {image.alt}
               </p>
             </motion.div>

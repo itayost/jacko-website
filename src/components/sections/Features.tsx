@@ -24,7 +24,7 @@ const features = [
 
 const Features = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+    <section className="py-20 bg-blue-primary">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <motion.div
@@ -34,10 +34,10 @@ const Features = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             למה ג׳קו?
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 max-w-2xl mx-auto">
             המסורת, הטעם והאיכות שעושים את ההבדל
           </p>
         </motion.div>
@@ -53,30 +53,38 @@ const Features = () => {
               viewport={{ once: true }}
               className="group"
             >
-              <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 overflow-hidden">
-                {/* Image Container */}
-                <div className="relative h-64 overflow-hidden">
+              <div className="relative h-[400px] rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 overflow-hidden">
+                {/* Full Background Image */}
+                <div className="absolute inset-0">
                   <Image
                     src={feature.image}
                     alt={feature.title}
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                 </div>
                 
-                {/* Content */}
-                <div className="p-8">
-                  <h3 className="text-2xl font-bold text-black mb-4">
+                {/* Gradient Overlays */}
+                <div className="absolute inset-0">
+                  {/* Optional: Top subtle darkening for better text visibility */}
+                  <div className="absolute inset-0 bg-black/20" />
+                  
+                  {/* Bottom gradient - stronger and higher to ensure text readability */}
+                  <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-blue-primary via-blue-primary/80 to-transparent" />
+                </div>
+                
+                {/* Content positioned at bottom */}
+                <div className="absolute bottom-0 left-0 right-0 p-8 z-10">
+                  <h3 className="text-2xl font-bold text-white mb-4 drop-shadow-lg">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-white/90 leading-relaxed drop-shadow">
                     {feature.description}
                   </p>
                 </div>
                 
-                {/* Bottom Accent */}
-                <div className="h-1 bg-yellow-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
+                {/* Bottom Accent Bar */}
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-yellow-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 z-20" />
               </div>
             </motion.div>
           ))}
@@ -92,7 +100,7 @@ const Features = () => {
         >
           <a
             href="/about"
-            className="inline-block bg-blue-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-dark transition-all hover:-translate-y-0.5 hover:shadow-lg"
+            className="inline-block bg-white text-blue-primary px-8 py-3 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all hover:-translate-y-0.5 hover:shadow-lg"
           >
             קראו עוד אודותינו
           </a>

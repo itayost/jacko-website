@@ -28,8 +28,10 @@ export default function MenuContainer() {
       />
 
       {/* Special Note */}
-      <div className="container mx-auto px-4">
-        <MenuNote />
+      <div className="bg-blue-primary pb-12">
+        <div className="container mx-auto px-4">
+          <MenuNote />
+        </div>
       </div>
     </>
   )

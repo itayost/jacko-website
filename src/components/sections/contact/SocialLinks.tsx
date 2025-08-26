@@ -24,7 +24,7 @@ export default function SocialLinks({ facebook, instagram }: SocialLinksProps) {
 
   return (
     <div>
-      <h3 className="font-semibold text-lg mb-3">עקבו אחרינו</h3>
+      <h3 className="font-semibold text-lg mb-3 text-white">עקבו אחרינו</h3>
       <div className="flex gap-3">
         {links.map(({ url, icon: Icon, name }) => (
           <a 
@@ -32,7 +32,7 @@ export default function SocialLinks({ facebook, instagram }: SocialLinksProps) {
             href={url} 
             target="_blank" 
             rel="noopener noreferrer"
-            className="bg-gray-100 p-3 rounded-full hover:bg-blue-primary hover:text-white transition-all"
+            className="bg-white/90 text-blue-primary p-3 rounded-full hover:bg-yellow-accent hover:text-black transition-all shadow-md"
             aria-label={name}
           >
             <Icon size={20} />

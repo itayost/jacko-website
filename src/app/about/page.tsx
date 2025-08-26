@@ -14,7 +14,7 @@ export default function AboutPage() {
       <AboutHero />
 
       {/* Story Section */}
-      <section className="py-16">
+      <section className="py-16 bg-blue-primary">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <AboutStory />

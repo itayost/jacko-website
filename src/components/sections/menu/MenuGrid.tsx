@@ -23,7 +23,7 @@ export default function MenuGrid({ menuData, selectedCategory, categories }: Men
   const filteredItems = getFilteredItems()
 
   return (
-    <section className="py-12">
+    <section className="py-12 bg-blue-primary">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           {filteredItems.map((item, index) => {

@@ -28,11 +28,11 @@ export default function AboutHero({
           sizes="100vw"
         />
         
-        {/* Top subtle darkening for better text readability */}
-        <div className="absolute inset-0 bg-black/20" />
+        {/* Overall darkening overlay for better text visibility */}
+        <div className="absolute inset-0 bg-black/30" />
         
-        {/* Bottom gradient - similar to your reference image */}
-        <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-blue-primary/90 via-blue-primary/50 to-transparent" />
+        {/* Bottom gradient - matching the home hero style */}
+        <div className="absolute bottom-0 left-0 right-0 h-2/3 bg-gradient-to-t from-blue-primary via-blue-primary/70 to-transparent" />
       </div>
 
       {/* Content */}

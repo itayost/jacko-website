@@ -7,7 +7,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-gradient-to-b from-gray-900 to-black text-white">
+    <footer className="bg-gradient-to-b from-blue-primary to-blue-dark text-white">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -20,9 +20,10 @@ const Footer = () => {
                 alt="ג׳קו מאכלי ים"
                 width={80}
                 height={80}
+                className="brightness-110"
               />
             </div>
-            <p className="text-gray-300 text-sm leading-relaxed">
+            <p className="text-white/80 text-sm leading-relaxed">
               מסעדת דגים ומאכלי ים מובילה בנתניה. 
               מגישים את הטעמים האותנטיים של הים התיכון כבר למעלה מ-50 שנה.
             </p>
@@ -33,27 +34,27 @@ const Footer = () => {
             <h3 className="font-bold text-lg mb-4 text-yellow-accent">קישורים מהירים</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/" className="text-white/80 hover:text-yellow-accent transition-colors">
                   עמוד הבית
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/about" className="text-white/80 hover:text-yellow-accent transition-colors">
                   אודותינו
                 </Link>
               </li>
               <li>
-                <Link href="/menu" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/menu" className="text-white/80 hover:text-yellow-accent transition-colors">
                   התפריט
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/contact" className="text-white/80 hover:text-yellow-accent transition-colors">
                   צור קשר
                 </Link>
               </li>
               <li>
-                <Link href="/contact#reservation" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/contact#reservation" className="text-white/80 hover:text-yellow-accent transition-colors">
                   הזמנת שולחן
                 </Link>
               </li>
@@ -64,18 +65,18 @@ const Footer = () => {
           <div>
             <h3 className="font-bold text-lg mb-4 text-yellow-accent">פרטי קשר</h3>
             <ul className="space-y-3">
-              <li className="flex items-center gap-2 text-gray-300">
-                <MapPin size={16} className="flex-shrink-0" />
+              <li className="flex items-center gap-2 text-white/80">
+                <MapPin size={16} className="flex-shrink-0 text-yellow-accent" />
                 <span className="text-sm">גיבורי ישראל 7, נתניה</span>
               </li>
-              <li className="flex items-center gap-2 text-gray-300">
-                <Phone size={16} className="flex-shrink-0" />
-                <a href="tel:09-8652878" className="text-sm hover:text-white transition-colors">
+              <li className="flex items-center gap-2 text-white/80">
+                <Phone size={16} className="flex-shrink-0 text-yellow-accent" />
+                <a href="tel:09-8652878" className="text-sm hover:text-yellow-accent transition-colors">
                   09-8652878
                 </a>
               </li>
-              <li className="flex items-start gap-2 text-gray-300">
-                <Clock size={16} className="flex-shrink-0 mt-0.5" />
+              <li className="flex items-start gap-2 text-white/80">
+                <Clock size={16} className="flex-shrink-0 mt-0.5 text-yellow-accent" />
                 <div className="text-sm">
                   <p>ראשון - חמישי: 12:00 - 22:30</p>
                   <p>שישי: 12:00 - 23:00</p>
@@ -85,28 +86,12 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Newsletter and Social */}
+          {/* Social Media */}
           <div>
-            <h3 className="font-bold text-lg mb-4 text-yellow-accent">הישארו מעודכנים</h3>
-            <p className="text-gray-300 text-sm mb-4">
-              הצטרפו לרשימת התפוצה שלנו וקבלו עדכונים על אירועים ומבצעים מיוחדים
+            <h3 className="font-bold text-lg mb-4 text-yellow-accent">עקבו אחרינו</h3>
+            <p className="text-white/80 text-sm mb-4">
+              הישארו מעודכנים עם החדשות והאירועים האחרונים שלנו
             </p>
-            <form className="mb-4">
-              <div className="flex gap-2">
-                <input
-                  type="email"
-                  placeholder="האימייל שלך"
-                  className="flex-1 px-3 py-2 bg-gray-800 rounded-lg text-sm text-white placeholder-gray-400 border border-gray-700 focus:border-blue-primary focus:outline-none"
-                  dir="ltr"
-                />
-                <button
-                  type="submit"
-                  className="px-4 py-2 bg-blue-primary hover:bg-blue-dark rounded-lg transition-colors text-sm font-medium"
-                >
-                  הרשם
-                </button>
-              </div>
-            </form>
             
             {/* Social Icons */}
             <div className="flex gap-3">
@@ -114,7 +99,7 @@ const Footer = () => {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-gray-800 hover:bg-blue-primary rounded-full flex items-center justify-center transition-colors"
+                className="w-10 h-10 bg-white/10 hover:bg-yellow-accent hover:text-black rounded-full flex items-center justify-center transition-all backdrop-blur border border-white/20"
                 aria-label="Facebook"
               >
                 <Facebook size={18} />
@@ -123,7 +108,7 @@ const Footer = () => {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-gray-800 hover:bg-blue-primary rounded-full flex items-center justify-center transition-colors"
+                className="w-10 h-10 bg-white/10 hover:bg-yellow-accent hover:text-black rounded-full flex items-center justify-center transition-all backdrop-blur border border-white/20"
                 aria-label="Instagram"
               >
                 <Instagram size={18} />
@@ -134,17 +119,17 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-gray-800">
+      <div className="border-t border-white/20">
         <div className="container mx-auto px-4 py-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="text-sm text-gray-400 text-center md:text-right">
+            <div className="text-sm text-white/60 text-center md:text-right">
               © {currentYear} ג׳קו מאכלי ים. כל הזכויות שמורות.
             </div>
-            <div className="flex items-center gap-1 text-sm text-gray-400">
+            <div className="flex items-center gap-1 text-sm text-white/60">
               <span>נבנה עם</span>
               <Heart size={14} className="text-red-500" />
               <span>על ידי</span>
-              <a href="#" className="text-blue-primary hover:text-white transition-colors">
+              <a href="#" className="text-yellow-accent hover:text-white transition-colors">
                 ItayOst
               </a>
             </div>

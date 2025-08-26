@@ -12,7 +12,7 @@ interface ContactContentProps {
 
 export default function ContactContent({ contactInfo, onReservationSubmit }: ContactContentProps) {
   return (
-    <section className="py-16">
+    <section className="py-16 bg-blue-primary">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
           {/* Contact Information */}

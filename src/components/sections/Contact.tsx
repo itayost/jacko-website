@@ -6,7 +6,7 @@ import { Phone, MapPin, Clock, Mail } from 'lucide-react'
 
 const Contact = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-50 to-white" id="contact">
+    <section className="py-20 bg-blue-primary" id="contact">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <motion.div
@@ -16,10 +16,10 @@ const Contact = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             בואו לבקר אותנו
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 max-w-2xl mx-auto">
             נשמח לארח אתכם במסעדה שלנו
           </p>
         </motion.div>
@@ -35,17 +35,17 @@ const Contact = () => {
           >
             {/* Address */}
             <div className="flex items-start gap-4">
-              <div className="bg-blue-primary text-white p-3 rounded-full">
+              <div className="bg-white text-blue-primary p-3 rounded-full">
                 <MapPin size={24} />
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-black mb-2">כתובת</h3>
-                <p className="text-gray-600">גיבורי ישראל 7, נתניה</p>
+                <h3 className="text-xl font-semibold text-white mb-2">כתובת</h3>
+                <p className="text-white/80">גיבורי ישראל 7, נתניה</p>
                 <a 
                   href="https://maps.google.com/?q=גיבורי+ישראל+7+נתניה"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-primary hover:underline text-sm mt-1 inline-block"
+                  className="text-yellow-accent hover:underline text-sm mt-1 inline-block"
                 >
                   הצג במפה ←
                 </a>
@@ -54,12 +54,12 @@ const Contact = () => {
 
             {/* Phone */}
             <div className="flex items-start gap-4">
-              <div className="bg-blue-primary text-white p-3 rounded-full">
+              <div className="bg-white text-blue-primary p-3 rounded-full">
                 <Phone size={24} />
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-black mb-2">טלפון</h3>
-                <a href="tel:09-8652878" className="text-gray-600 hover:text-blue-primary transition-colors text-lg font-medium">
+                <h3 className="text-xl font-semibold text-white mb-2">טלפון</h3>
+                <a href="tel:09-8652878" className="text-white/80 hover:text-yellow-accent transition-colors text-lg font-medium">
                   09-8652878
                 </a>
               </div>
@@ -67,12 +67,12 @@ const Contact = () => {
 
             {/* Hours */}
             <div className="flex items-start gap-4">
-              <div className="bg-blue-primary text-white p-3 rounded-full">
+              <div className="bg-white text-blue-primary p-3 rounded-full">
                 <Clock size={24} />
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-black mb-2">שעות פתיחה</h3>
-                <div className="space-y-1 text-gray-600">
+                <h3 className="text-xl font-semibold text-white mb-2">שעות פתיחה</h3>
+                <div className="space-y-1 text-white/80">
                   <p>ראשון - חמישי: 12:00 - 22:30</p>
                   <p>שישי: 12:00 - 23:00</p>
                   <p>שבת: 12:00 - 22:30</p>
@@ -82,12 +82,12 @@ const Contact = () => {
 
             {/* Email */}
             <div className="flex items-start gap-4">
-              <div className="bg-blue-primary text-white p-3 rounded-full">
+              <div className="bg-white text-blue-primary p-3 rounded-full">
                 <Mail size={24} />
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-black mb-2">אימייל</h3>
-                <a href="mailto:info@jacko-seafood.co.il" className="text-gray-600 hover:text-blue-primary transition-colors">
+                <h3 className="text-xl font-semibold text-white mb-2">אימייל</h3>
+                <a href="mailto:info@jacko-seafood.co.il" className="text-white/80 hover:text-yellow-accent transition-colors">
                   info@jacko-seafood.co.il
                 </a>
               </div>
@@ -100,10 +100,10 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="bg-white rounded-2xl shadow-xl p-8"
+            className="bg-white/95 backdrop-blur rounded-2xl shadow-xl p-8"
             id="reservation"
           >
-            <h3 className="text-2xl font-bold text-black mb-6">הזמנת שולחן</h3>
+            <h3 className="text-2xl font-bold text-blue-primary mb-6">הזמנת שולחן</h3>
             <form className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
@@ -164,7 +164,7 @@ const Contact = () => {
 
               <button
                 type="submit"
-                className="w-full bg-blue-primary text-white py-3 rounded-lg font-semibold hover:bg-blue-dark transition-all hover:shadow-lg"
+                className="w-full bg-blue-primary text-white py-3 rounded-full font-semibold hover:bg-blue-dark transition-all hover:shadow-lg"
               >
                 שלח הזמנה
               </button>

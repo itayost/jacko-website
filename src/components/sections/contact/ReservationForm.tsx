@@ -58,8 +58,8 @@ export default function ReservationForm({ onSubmit }: ReservationFormProps) {
       transition={{ duration: 0.6 }}
       className="lg:col-span-2"
     >
-      <div className="bg-white rounded-2xl shadow-xl p-8">
-        <h2 className="text-2xl font-bold text-black mb-6">הזמנת שולחן</h2>
+      <div className="bg-white/95 backdrop-blur rounded-2xl shadow-xl p-8">
+        <h2 className="text-2xl font-bold text-blue-primary mb-6">הזמנת שולחן</h2>
         
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Name and Phone */}
@@ -179,7 +179,7 @@ export default function ReservationForm({ onSubmit }: ReservationFormProps) {
           {/* Submit Button */}
           <button
             type="submit"
-            className="w-full bg-blue-primary text-white py-3 rounded-lg font-semibold hover:bg-blue-dark transition-all hover:shadow-lg flex items-center justify-center gap-2"
+            className="w-full bg-blue-primary text-white py-3 rounded-full font-semibold hover:bg-blue-dark transition-all hover:shadow-lg flex items-center justify-center gap-2"
           >
             <Send size={20} />
             שלח הזמנה

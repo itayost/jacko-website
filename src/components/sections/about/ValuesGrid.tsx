@@ -9,29 +9,29 @@ const values = [
     icon: Fish,
     title: 'טריות',
     description: 'דגים טריים מדי יום ישירות מהים',
-    bgColor: 'bg-blue-primary',
-    textColor: 'text-white'
+    bgColor: 'bg-white',
+    iconColor: 'text-blue-primary'
   },
   {
     icon: Award,
     title: 'איכות',
     description: 'חומרי גלם מובחרים ללא פשרות',
     bgColor: 'bg-yellow-accent',
-    textColor: 'text-black'
+    iconColor: 'text-black'
   },
   {
     icon: Users,
     title: 'משפחתיות',
     description: 'אווירה חמה ומסורת משפחתית',
-    bgColor: 'bg-blue-primary',
-    textColor: 'text-white'
+    bgColor: 'bg-white',
+    iconColor: 'text-blue-primary'
   },
   {
     icon: Clock,
     title: 'מסורת',
     description: '50 שנות ניסיון ומצוינות',
     bgColor: 'bg-yellow-accent',
-    textColor: 'text-black'
+    iconColor: 'text-black'
   }
 ]
 
@@ -48,11 +48,11 @@ export default function ValuesGrid() {
         const Icon = value.icon
         return (
           <div key={index} className="text-center">
-            <div className={`${value.bgColor} ${value.textColor} w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4`}>
+            <div className={`${value.bgColor} ${value.iconColor} w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg`}>
               <Icon size={28} />
             </div>
-            <h3 className="font-bold text-lg mb-2">{value.title}</h3>
-            <p className="text-gray-600 text-sm">{value.description}</p>
+            <h3 className="font-bold text-lg mb-2 text-white">{value.title}</h3>
+            <p className="text-white/80 text-sm">{value.description}</p>
           </div>
         )
       })}
