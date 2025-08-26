@@ -9,11 +9,6 @@ interface SocialLinksProps {
   twitter?: string
 }
 
-const socialIcons = {
-  facebook: Facebook,
-  instagram: Instagram,
-}
-
 export default function SocialLinks({ facebook, instagram }: SocialLinksProps) {
   const links = [
     { url: facebook, icon: Facebook, name: 'Facebook' },

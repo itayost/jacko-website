@@ -4,7 +4,7 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 const preparations = [
@@ -32,14 +32,7 @@ const preparations = [
 
 const MenuPreview = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
-  const [width, setWidth] = useState(0)
   const carousel = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    if (carousel.current) {
-      setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth)
-    }
-  }, [])
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => 

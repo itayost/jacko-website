@@ -14,7 +14,7 @@ export default function MenuGrid({ menuData, selectedCategory, categories }: Men
   const getFilteredItems = (): MenuItem[] => {
     if (selectedCategory === 'all') {
       return Object.entries(menuData).flatMap(([category, items]) => 
-        items.map(item => ({ ...item, category }))
+        items.map((item: MenuItem) => ({ ...item, category }))
       )
     }
     return menuData[selectedCategory as keyof MenuData] || []

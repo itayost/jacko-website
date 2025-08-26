@@ -6,7 +6,7 @@ import type { MenuData, MenuItem } from '@/types/menu'
  */
 export function getAllMenuItems(menuData: MenuData): (MenuItem & { category: string })[] {
   return Object.entries(menuData).flatMap(([category, items]) => 
-    items.map(item => ({ ...item, category }))
+    items.map((item: MenuItem) => ({ ...item, category }))
   )
 }
 

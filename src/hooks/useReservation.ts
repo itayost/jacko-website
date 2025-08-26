@@ -90,7 +90,7 @@ export function useReservation(initialData?: Partial<ReservationFormData>) {
         })
         return false
       }
-    } catch (error) {
+    } catch {
       setSubmitStatus({ 
         type: 'error', 
         message: 'שגיאה בשליחת ההזמנה. נא לנסות שוב.' 
