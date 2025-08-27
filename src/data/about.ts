@@ -199,10 +199,3 @@ export const aboutSections: AboutSection[] = [
     ]
   }
 ]
-
-export const aboutHero = {
-  title: 'הסיפור שלנו',
-  subtitle: '50 שנה של טעם, מסורת ואהבה לים',
-  backgroundImage: '/images/about-hero.jpg',
-  description: 'ממסעדה קטנה בחיפה למוסד קולינרי מוביל על חוף נתניה'
-}

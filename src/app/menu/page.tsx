@@ -63,7 +63,7 @@ export default function MenuPage() {
           __html: JSON.stringify(menuJsonLd)
         }}
       />
-      <main className="min-h-screen bg-blue-secondary">
+      <main className="min-h-screen bg-blue-primary">
         {/* Hero Section */}
         <MenuHero />
         

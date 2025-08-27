@@ -8,7 +8,7 @@ import { Phone, MapPin, Clock, Mail } from 'lucide-react'
 
 const Contact = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-blue-secondary to-blue-primary overflow-x-hidden" id="contact">
+    <section className="py-20 bg-gradient-to-b from-blue-primary to-blue-secondary overflow-x-hidden" id="contact">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <motion.div

@@ -28,7 +28,7 @@ export default function MenuContainer() {
       />
 
       {/* Special Note */}
-      <div className="bg-gradient-to-b from-blue-secondary to-blue-primary pb-12">
+      <div className="bg-gradient-to-b from-blue-primary to-blue-secondary pb-12">
         <div className="container mx-auto px-4">
           <MenuNote />
         </div>

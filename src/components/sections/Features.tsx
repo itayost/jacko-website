@@ -24,7 +24,7 @@ const features = [
 
 const Features = () => {
   return (
-    <section className="py-20 bg-blue-secondary">
+    <section className="py-20 bg-blue-primary">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <motion.div
@@ -70,7 +70,7 @@ const Features = () => {
                   <div className="absolute inset-0 bg-black/20" />
                   
                   {/* Bottom gradient - stronger and higher to ensure text readability */}
-                  <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-blue-primary via-blue-primary/80 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-blue-secondary via-blue-primary/80 to-transparent" />
                 </div>
                 
                 {/* Content positioned at bottom */}

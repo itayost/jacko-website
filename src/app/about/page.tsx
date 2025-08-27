@@ -4,7 +4,7 @@
 import { motion } from 'framer-motion'
 import StoryWithGallery from '@/components/sections/about/StoryWithGallery'
 import { AboutHero } from '@/components/sections/about'
-import { aboutSections, aboutHero } from '@/data/about'
+import { aboutSections} from '@/data/about'
 
 export default function AboutPage() {
   return (
@@ -21,7 +21,7 @@ export default function AboutPage() {
       ))}
 
       {/* Call to Action */}
-      <section className="py-20 bg-gradient-to-b from-blue-secondary to-blue-primary">
+      <section className="py-20 bg-gradient-to-b from-blue-primary to-blue-secondary">
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

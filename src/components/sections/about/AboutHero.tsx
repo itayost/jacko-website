@@ -32,7 +32,7 @@ export default function AboutHero({
         <div className="absolute inset-0 bg-black/30" />
         
         {/* Bottom gradient - matching the home hero style */}
-        <div className="absolute bottom-0 left-0 right-0 h-2/3 bg-gradient-to-t from-blue-secondary via-blue-secondary/70 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-2/3 bg-gradient-to-t from-blue-primary via-blue-primary/70 to-transparent" />
       </div>
 
       {/* Content */}

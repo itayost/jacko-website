@@ -1,5 +1,4 @@
 // src/types/menu.ts
-import { LucideIcon } from 'lucide-react'
 
 export interface MenuCategory {
   id: string

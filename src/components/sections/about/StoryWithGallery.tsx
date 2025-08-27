@@ -14,7 +14,6 @@ interface StoryWithGalleryProps {
 
 export default function StoryWithGallery({ section, index }: StoryWithGalleryProps) {
   const [selectedImage, setSelectedImage] = useState<number | null>(null)
-  const isEven = index % 2 === 0
 
   const openLightbox = (imageIndex: number) => {
     setSelectedImage(imageIndex)
@@ -297,7 +296,7 @@ export default function StoryWithGallery({ section, index }: StoryWithGalleryPro
 
   return (
     <>
-      <section className="py-16 lg:py-24 overflow-x-hidden bg-blue-secondary">
+      <section className="py-16 lg:py-24 overflow-x-hidden bg-blue-primary">
         <div className="container mx-auto px-4">
           {renderLayout()}
         </div>
