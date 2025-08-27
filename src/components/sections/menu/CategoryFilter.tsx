@@ -40,7 +40,7 @@ export default function CategoryFilter({
       className={`sticky top-16 z-40 py-4 transition-all duration-300 ${
         isSticky 
           ? 'bg-white/70 backdrop-blur-md shadow-lg' 
-          : 'bg-blue-primary shadow-sm'
+          : 'bg-blue-secondary shadow-sm'
       }`}
     >
       {/* Desktop - with container */}

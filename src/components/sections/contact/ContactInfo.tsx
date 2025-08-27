@@ -14,8 +14,8 @@ interface ContactInfoProps {
 export default function ContactInfo({ info }: ContactInfoProps) {
   return (
     <motion.div
-      initial={{ opacity: 0, x: -30 }}
-      animate={{ opacity: 1, x: 0 }}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
       className="lg:col-span-1 space-y-8"
     >
@@ -41,9 +41,7 @@ export default function ContactInfo({ info }: ContactInfoProps) {
           <a href={`tel:${info.phone.number}`} className="text-white/80 hover:text-yellow-accent text-lg transition-colors">
             {info.phone.number}
           </a>
-          {info.phone.whatsappAvailable && (
-            <p className="text-sm text-white/60 mt-1">זמינים גם ב-WhatsApp</p>
-          )}
+          {info.phone.whatsappAvailable}
         </ContactItem>
 
         {/* Email */}

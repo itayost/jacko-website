@@ -129,7 +129,7 @@ const Footer = () => {
               <span>נבנה עם</span>
               <Heart size={14} className="text-red-500" />
               <span>על ידי</span>
-              <a href="#" className="text-yellow-accent hover:text-white transition-colors">
+              <a href="https://ItayOst.com" target="_blank" className="text-yellow-accent hover:text-white transition-colors">
                 ItayOst
               </a>
             </div>

@@ -54,9 +54,9 @@ const HeroSection = () => {
         
         {/* Top gradient - darker for better text visibility */}
         <div className="absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-black/60 to-transparent" />
-        
-        {/* Bottom gradient with blue-primary to match other sections */}
-        <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-blue-primary via-blue-primary/70 to-transparent" />
+
+        {/* Bottom gradient with blue-secondary to match other sections */}
+        <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-blue-secondary via-blue-secondary/70 to-transparent" />
       </div>
 
       {/* Content */}

@@ -13,6 +13,7 @@ const config: Config = {
     extend: {
       colors: {
         'blue-primary': '#3f88c5',
+        'blue-secondary': '#004da6',
         'blue-dark': '#356fa3',
         'yellow-accent': '#ffde59',
         'yellow-dark': '#f5d445',

@@ -32,22 +32,24 @@ const preparations = [
 
 const MenuPreview = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
-  const carousel = useRef<HTMLDivElement>(null)
+  const carouselRef = useRef<HTMLDivElement>(null)
 
+  // In RTL, "next" goes to the left (decreases index)
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => 
-      prevIndex === preparations.length - 1 ? 0 : prevIndex + 1
-    )
-  }
-
-  const prevSlide = () => {
     setCurrentIndex((prevIndex) => 
       prevIndex === 0 ? preparations.length - 1 : prevIndex - 1
     )
   }
 
+  // In RTL, "prev" goes to the right (increases index)
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex === preparations.length - 1 ? 0 : prevIndex + 1
+    )
+  }
+
   return (
-    <section className="py-20 bg-blue-primary">
+    <section className="py-20 bg-blue-secondary" id="menu">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <motion.div
@@ -115,21 +117,27 @@ const MenuPreview = () => {
           ))}
         </div>
 
-        {/* Mobile Carousel */}
-        <div className="md:hidden relative mb-12">
-          <div className="overflow-hidden" ref={carousel}>
-            <motion.div
-              className="flex"
-              animate={{ x: `${-currentIndex * 100}%` }}
-              transition={{ type: "spring", stiffness: 300, damping: 30 }}
-            >
+        {/* Mobile Carousel - RTL Version */}
+        <div className="md:hidden relative mb-12" dir="rtl">
+          <div className="relative overflow-hidden rounded-2xl mx-4" ref={carouselRef}>
+            <div className="relative h-[400px] w-full">
+              {/* All Slides Positioned Absolutely - RTL Animation */}
               {preparations.map((prep, index) => (
-                <div
+                <motion.div
                   key={index}
-                  className="min-w-full px-4"
+                  className="absolute inset-0 w-full h-full"
+                  initial={false}
+                  animate={{
+                    x: `${-(index - currentIndex) * 100}%`, // Negative for RTL
+                  }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 300,
+                    damping: 30,
+                  }}
                 >
                   <Link href="/menu">
-                    <div className="relative h-[400px] rounded-2xl shadow-lg overflow-hidden">
+                    <div className="relative h-full w-full">
                       {/* Full Background Image */}
                       <div className="absolute inset-0">
                         <Image
@@ -137,6 +145,8 @@ const MenuPreview = () => {
                           alt={prep.title}
                           fill
                           className="object-cover"
+                          sizes="100vw"
+                          priority={index === 0}
                         />
                       </div>
                       
@@ -150,39 +160,39 @@ const MenuPreview = () => {
                       </div>
                       
                       {/* Content positioned at bottom */}
-                      <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
-                        <h3 className="text-2xl font-bold text-white mb-2 drop-shadow-lg">
+                      <div className="absolute bottom-0 left-0 right-0 p-6 z-10" dir="rtl">
+                        <h3 className="text-2xl font-bold text-white mb-2 drop-shadow-lg text-right">
                           {prep.title}
                         </h3>
-                        <p className="text-white/90 text-base leading-relaxed drop-shadow">
+                        <p className="text-white/90 text-base leading-relaxed drop-shadow text-right">
                           {prep.description}
                         </p>
                       </div>
                     </div>
                   </Link>
-                </div>
+                </motion.div>
               ))}
-            </motion.div>
+            </div>
           </div>
           
-          {/* Carousel Controls */}
+          {/* Carousel Controls - Swapped for RTL */}
           <button
             onClick={prevSlide}
-            className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white rounded-full p-2 shadow-lg z-10"
+            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white rounded-full p-3 shadow-lg z-10 transition-all"
             aria-label="Previous slide"
-          >
-            <ChevronLeft size={24} className="text-blue-primary" />
-          </button>
-          <button
-            onClick={nextSlide}
-            className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white rounded-full p-2 shadow-lg z-10"
-            aria-label="Next slide"
           >
             <ChevronRight size={24} className="text-blue-primary" />
           </button>
+          <button
+            onClick={nextSlide}
+            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white rounded-full p-3 shadow-lg z-10 transition-all"
+            aria-label="Next slide"
+          >
+            <ChevronLeft size={24} className="text-blue-primary" />
+          </button>
           
-          {/* Carousel Indicators */}
-          <div className="flex justify-center gap-2 mt-4">
+          {/* Carousel Indicators - RTL Order */}
+          <div className="flex justify-center gap-2 mt-6 flex-row-reverse">
             {preparations.map((_, index) => (
               <button
                 key={index}
@@ -190,7 +200,7 @@ const MenuPreview = () => {
                 className={`h-2 rounded-full transition-all ${
                   index === currentIndex 
                     ? 'w-8 bg-yellow-accent' 
-                    : 'w-2 bg-white/50'
+                    : 'w-2 bg-white/50 hover:bg-white/70'
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
               />

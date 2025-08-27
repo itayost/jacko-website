@@ -6,7 +6,7 @@ import { Phone, MapPin, Clock, Mail } from 'lucide-react'
 
 const Contact = () => {
   return (
-    <section className="py-20 bg-blue-primary" id="contact">
+    <section className="py-20 bg-gradient-to-b from-blue-secondary to-blue-primary overflow-x-hidden" id="contact">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <motion.div
@@ -25,17 +25,27 @@ const Contact = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Info */}
+          {/* Contact Info - Mobile: no X animation, Desktop: X animation */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ 
+              opacity: 1, 
+              y: 0,
+              x: 0 
+            }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="space-y-8"
           >
             {/* Address */}
-            <div className="flex items-start gap-4">
-              <div className="bg-white text-blue-primary p-3 rounded-full">
+            <motion.div 
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.4, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="flex items-start gap-4"
+            >
+              <div className="bg-white text-blue-primary p-3 rounded-full shrink-0">
                 <MapPin size={24} />
               </div>
               <div>
@@ -50,11 +60,17 @@ const Contact = () => {
                   הצג במפה ←
                 </a>
               </div>
-            </div>
+            </motion.div>
 
             {/* Phone */}
-            <div className="flex items-start gap-4">
-              <div className="bg-white text-blue-primary p-3 rounded-full">
+            <motion.div 
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.4, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="flex items-start gap-4"
+            >
+              <div className="bg-white text-blue-primary p-3 rounded-full shrink-0">
                 <Phone size={24} />
               </div>
               <div>
@@ -63,11 +79,17 @@ const Contact = () => {
                   09-8652878
                 </a>
               </div>
-            </div>
+            </motion.div>
 
             {/* Hours */}
-            <div className="flex items-start gap-4">
-              <div className="bg-white text-blue-primary p-3 rounded-full">
+            <motion.div 
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.4, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="flex items-start gap-4"
+            >
+              <div className="bg-white text-blue-primary p-3 rounded-full shrink-0">
                 <Clock size={24} />
               </div>
               <div>
@@ -78,11 +100,17 @@ const Contact = () => {
                   <p>שבת: 12:00 - 22:30</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
             {/* Email */}
-            <div className="flex items-start gap-4">
-              <div className="bg-white text-blue-primary p-3 rounded-full">
+            <motion.div 
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.4, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="flex items-start gap-4"
+            >
+              <div className="bg-white text-blue-primary p-3 rounded-full shrink-0">
                 <Mail size={24} />
               </div>
               <div>
@@ -91,16 +119,20 @@ const Contact = () => {
                   info@jacko-seafood.co.il
                 </a>
               </div>
-            </div>
+            </motion.div>
           </motion.div>
 
-          {/* Reservation Form */}
+          {/* Reservation Form - Mobile: no X animation, Desktop: subtle fade */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ 
+              opacity: 1, 
+              y: 0,
+              x: 0 
+            }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="bg-white/95 backdrop-blur rounded-2xl shadow-xl p-8"
+            className="bg-white/95 backdrop-blur rounded-2xl shadow-xl p-6 md:p-8"
             id="reservation"
           >
             <h3 className="text-2xl font-bold text-blue-primary mb-6">הזמנת שולחן</h3>

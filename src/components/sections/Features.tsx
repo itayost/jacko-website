@@ -24,7 +24,7 @@ const features = [
 
 const Features = () => {
   return (
-    <section className="py-20 bg-blue-primary">
+    <section className="py-20 bg-blue-secondary">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <motion.div

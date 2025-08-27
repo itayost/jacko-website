@@ -19,7 +19,7 @@ export default function MapSection({
   mapEmbedUrl 
 }: MapSectionProps) {
   return (
-    <section className="py-16 bg-blue-primary">
+    <section className="py-16 bg-gradient-to-b from-blue-secondary to-blue-primary overflow-x-hidden">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
