@@ -1,7 +1,9 @@
 // src/components/layout/Footer.tsx
 import Link from 'next/link'
 import Image from 'next/image'
-import { Phone, MapPin, Clock, Facebook, Instagram, Heart } from 'lucide-react'
+import { Phone, MapPin, Clock, Heart } from 'lucide-react'
+import { contactInfo } from '@/data/contact'
+import SocialLinks from '@/components/sections/contact/SocialLinks'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -67,20 +69,30 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-white/80">
                 <MapPin size={16} className="flex-shrink-0 text-yellow-accent" />
-                <span className="text-sm">גיבורי ישראל 7, נתניה</span>
+                <a 
+                  href={contactInfo.address.mapUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm hover:text-yellow-accent transition-colors"
+                >
+                  {contactInfo.address.street}, {contactInfo.address.city}
+                </a>
               </li>
               <li className="flex items-center gap-2 text-white/80">
                 <Phone size={16} className="flex-shrink-0 text-yellow-accent" />
-                <a href="tel:09-8652878" className="text-sm hover:text-yellow-accent transition-colors">
-                  09-8652878
+                <a 
+                  href={`tel:${contactInfo.phone.number}`} 
+                  className="text-sm hover:text-yellow-accent transition-colors"
+                >
+                  {contactInfo.phone.number}
                 </a>
               </li>
               <li className="flex items-start gap-2 text-white/80">
                 <Clock size={16} className="flex-shrink-0 mt-0.5 text-yellow-accent" />
                 <div className="text-sm">
-                  <p>ראשון - חמישי: 12:00 - 22:30</p>
-                  <p>שישי: 12:00 - 23:00</p>
-                  <p>שבת: 12:00 - 22:30</p>
+                  <p>ראשון - חמישי: {contactInfo.hours.weekdays}</p>
+                  <p>שישי: {contactInfo.hours.friday}</p>
+                  <p>שבת: {contactInfo.hours.saturday}</p>
                 </div>
               </li>
             </ul>
@@ -93,27 +105,12 @@ const Footer = () => {
               הישארו מעודכנים עם החדשות והאירועים האחרונים שלנו
             </p>
             
-            {/* Social Icons */}
-            <div className="flex gap-3">
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-white/10 hover:bg-yellow-accent hover:text-black rounded-full flex items-center justify-center transition-all backdrop-blur border border-white/20"
-                aria-label="Facebook"
-              >
-                <Facebook size={18} />
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-white/10 hover:bg-yellow-accent hover:text-black rounded-full flex items-center justify-center transition-all backdrop-blur border border-white/20"
-                aria-label="Instagram"
-              >
-                <Instagram size={18} />
-              </a>
-            </div>
+            {/* Use the SocialLinks component with data from contact info */}
+            <SocialLinks
+              facebook={contactInfo.social.facebook}
+              instagram={contactInfo.social.instagram}
+              tiktok={contactInfo.social.tiktok}
+            />
           </div>
         </div>
       </div>

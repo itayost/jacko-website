@@ -2,6 +2,8 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import SocialLinks from '@/components/sections/contact/SocialLinks'
+import { contactInfo } from '@/data/contact'
 import { Phone, MapPin, Clock, Mail } from 'lucide-react'
 
 const Contact = () => {
@@ -119,6 +121,24 @@ const Contact = () => {
                   info@jacko-seafood.co.il
                 </a>
               </div>
+            </motion.div>
+
+            {/* Social Media */}
+            <motion.div 
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.4, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="flex items-start gap-4"
+            >
+          <div>
+            <h3 className="text-xl font-semibold text-white mb-2">עקבו אחרינו</h3>
+            <SocialLinks
+              facebook={contactInfo.social.facebook}
+              instagram={contactInfo.social.instagram}
+              tiktok={contactInfo.social.tiktok}
+            />
+          </div>
             </motion.div>
           </motion.div>
 

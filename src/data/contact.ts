@@ -5,7 +5,7 @@ export const contactInfo: ContactInfo = {
   address: {
     street: 'גיבורי ישראל 7',
     city: 'נתניה',
-    mapUrl: 'https://maps.google.com/?q=גיבורי+ישראל+7+נתניה'
+    mapUrl: 'https://maps.app.goo.gl/NqtGsjewHd5kpeTG8'
   },
   phone: {
     number: '09-8652878',
