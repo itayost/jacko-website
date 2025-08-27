@@ -11,7 +11,7 @@ const heebo = Heebo({
 })
 
 // Base URL for your website - update this to your actual domain
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://jacko-seafood.co.il'
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://jacko-website-six.vercel.app/'
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
