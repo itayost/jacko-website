@@ -3,12 +3,12 @@ import { Fish, Shell, Utensils, Coffee, Star } from 'lucide-react'
 import type { MenuCategory, MenuData } from '@/types/menu'
 
 export const menuCategories: MenuCategory[] = [
-  { id: 'all', name: 'הכל', icon: Star },
-  { id: 'appetizers', name: 'ראשונות', icon: Star },
-  { id: 'fish', name: 'דגים', icon: Fish },
-  { id: 'seafood', name: 'פירות ים', icon: Shell },
-  { id: 'mains', name: 'עיקריות', icon: Utensils },
-  { id: 'desserts', name: 'קינוחים', icon: Coffee },
+  { id: 'all', name: 'הכל' },
+  { id: 'appetizers', name: 'ראשונות' },
+  { id: 'fish', name: 'דגים' },
+  { id: 'seafood', name: 'פירות ים' },
+  { id: 'mains', name: 'עיקריות' },
+  { id: 'desserts', name: 'קינוחים' },
 ]
 
 export const menuData: MenuData = {
