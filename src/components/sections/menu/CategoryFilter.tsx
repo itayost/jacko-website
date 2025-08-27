@@ -48,7 +48,6 @@ export default function CategoryFilter({
         <div className="container mx-auto px-4">
           <div className="flex justify-center gap-3">
             {categories.map((category) => {
-              const Icon = category.icon
               return (
                 <motion.button
                   key={category.id}
@@ -65,7 +64,6 @@ export default function CategoryFilter({
                         : 'bg-white/90 text-blue-primary hover:bg-white'
                   }`}
                 >
-                  <Icon size={18} />
                   <span>{category.name}</span>
                 </motion.button>
               )
@@ -78,7 +76,6 @@ export default function CategoryFilter({
       <div className="md:hidden overflow-x-auto no-scrollbar">
         <div className="flex gap-3 w-max px-4">
           {categories.map((category) => {
-            const Icon = category.icon
             return (
               <motion.button
                 key={category.id}
@@ -94,7 +91,6 @@ export default function CategoryFilter({
                       : 'bg-white/90 text-blue-primary hover:bg-white'
                 }`}
               >
-                <Icon size={18} />
                 <span>{category.name}</span>
               </motion.button>
             )

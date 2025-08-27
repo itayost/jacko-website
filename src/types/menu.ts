@@ -4,7 +4,6 @@ import { LucideIcon } from 'lucide-react'
 export interface MenuCategory {
   id: string
   name: string
-  icon: LucideIcon
 }
 
 export interface MenuItem {
