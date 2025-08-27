@@ -64,7 +64,7 @@ export default function ContactInfo({ info }: ContactInfoProps) {
         <SocialLinks 
           facebook={info.social.facebook}
           instagram={info.social.instagram}
-          twitter={info.social.twitter}
+          tiktok={info.social.tiktok}
         />
       </div>
     </motion.div>

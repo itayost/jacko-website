@@ -19,7 +19,7 @@ export interface ContactInfo {
   social: {
     facebook?: string
     instagram?: string
-    twitter?: string
+    tiktok?: string
   }
 }
 

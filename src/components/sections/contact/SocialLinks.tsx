@@ -1,18 +1,19 @@
 // src/components/sections/contact/SocialLinks.tsx
 'use client'
 
-import { Facebook, Instagram } from 'lucide-react'
+import { Facebook, Instagram, TikTok } from 'lucide-react'
 
 interface SocialLinksProps {
   facebook?: string
   instagram?: string
-  twitter?: string
+  tiktok?: string
 }
 
-export default function SocialLinks({ facebook, instagram }: SocialLinksProps) {
+export default function SocialLinks({ facebook, instagram, tiktok }: SocialLinksProps) {
   const links = [
     { url: facebook, icon: Facebook, name: 'Facebook' },
     { url: instagram, icon: Instagram, name: 'Instagram' },
+    { url: tiktok, icon: TikTok, name: 'TikTok' }
   ].filter(link => link.url)
 
   if (links.length === 0) return null

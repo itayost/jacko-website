@@ -18,8 +18,9 @@ export const contactInfo: ContactInfo = {
     saturday: '12:00 - 22:30'
   },
   social: {
-    facebook: 'https://facebook.com',
-    instagram: 'https://instagram.com'
+    facebook: 'https://www.facebook.com/jako.rest/',
+    instagram: 'https://www.instagram.com/jacko_netanya/',
+    tiktok: 'https://www.tiktok.com/@jackonetanya'
   }
 }
 
