@@ -1,5 +1,4 @@
 // src/data/menu.ts
-import { Fish, Shell, Utensils, Coffee, Star } from 'lucide-react'
 import type { MenuCategory, MenuData } from '@/types/menu'
 
 export const menuCategories: MenuCategory[] = [
