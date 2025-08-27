@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     locale: 'he_IL',
     images: [
       {
-        url: '/images/hero-bg.jpg',
+        url: '/images/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'ג׳קו - מסעדת דגים ומאכלי ים בנתניה',
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'ג׳קו - מסעדת דגים ומאכלי ים | מאז 1973',
     description: 'מסעדת דגים ומאכלי ים מובילה בנתניה. מאז 1973 מגישים את הטעמים האותנטיים של הים התיכון.',
-    images: ['/images/hero-bg.jpg'],
+    images: ['/images/og-image.jpg'],
     creator: '@jackonetanya', // Update with actual Twitter handle
     site: '@jackonetanya', // Update with actual Twitter handle
   },
@@ -125,7 +125,7 @@ export default function RootLayout({
     '@id': baseUrl,
     name: 'ג׳קו - מסעדת דגים ומאכלי ים',
     image: [
-      `${baseUrl}/images/hero-bg.jpg`,
+      `${baseUrl}/images/og-image.jpg`,
       `${baseUrl}/images/logo.png`
     ],
     url: baseUrl,
