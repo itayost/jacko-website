@@ -40,7 +40,9 @@ const Navigation = () => {
               alt="ג׳קו מאכלי ים"
               width={isScrolled ? 50 : 60}
               height={isScrolled ? 50 : 60}
+              priority
               className="transition-all duration-300"
+              style={{ width: 'auto', height: 'auto' }}
             />
           </Link>
 

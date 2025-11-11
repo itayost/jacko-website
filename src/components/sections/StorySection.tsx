@@ -77,6 +77,7 @@ const StorySection = () => {
                         src="/images/gallery/family-cooking.jpg"
                         alt="המסורת המשפחתית של ג׳קו"
                         fill
+                        sizes="(max-width: 768px) 100vw, 50vw"
                         className="object-cover"
                       />
                     </div>
@@ -85,6 +86,7 @@ const StorySection = () => {
                         src="/images/gallery/restaurant-view.jpg"
                         alt="מסעדת ג׳קו"
                         fill
+                        sizes="(max-width: 768px) 100vw, 50vw"
                         className="object-cover"
                       />
                     </div>
