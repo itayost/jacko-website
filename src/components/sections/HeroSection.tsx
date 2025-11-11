@@ -1,25 +1,53 @@
 // src/components/sections/HeroSection.tsx
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useCallback } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { ChevronDown } from 'lucide-react'
+import useEmblaCarousel from 'embla-carousel-react'
+import Autoplay from 'embla-carousel-autoplay'
+
+const heroImages = [
+  '/images/hero-bg.jpg',
+  '/images/gallery/grilled-fish.jpg',
+  '/images/gallery/fresh-fish.jpg',
+  '/images/gallery/restaurant-view.jpg',
+  '/images/gallery/baked-fish.jpg',
+]
 
 const HeroSection = () => {
   const [offsetY, setOffsetY] = useState(0)
   const { scrollY } = useScroll()
-  
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
+    Autoplay({ delay: 4000, stopOnInteraction: false })
+  ])
+  const [selectedIndex, setSelectedIndex] = useState(0)
+
   // Parallax transform
   const y = useTransform(scrollY, [0, 500], [0, 150])
   const opacity = useTransform(scrollY, [0, 300], [1, 0])
-  
+
   useEffect(() => {
     const handleScroll = () => setOffsetY(window.pageYOffset)
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return
+    setSelectedIndex(emblaApi.selectedScrollSnap())
+  }, [emblaApi])
+
+  useEffect(() => {
+    if (!emblaApi) return
+    onSelect()
+    emblaApi.on('select', onSelect)
+    return () => {
+      emblaApi.off('select', onSelect)
+    }
+  }, [emblaApi, onSelect])
 
   const scrollToContent = () => {
     window.scrollTo({
@@ -28,22 +56,32 @@ const HeroSection = () => {
     })
   }
 
+  const scrollTo = useCallback((index: number) => {
+    if (emblaApi) emblaApi.scrollTo(index)
+  }, [emblaApi])
+
   return (
     <section className="relative h-screen overflow-hidden">
-      {/* Parallax Background Image */}
-      <motion.div 
+      {/* Carousel Background */}
+      <motion.div
         className="absolute inset-0 z-0"
         style={{ y }}
       >
-        <div className="relative w-full h-[120%]">
-          <Image
-            src="/images/hero-bg.jpg"
-            alt="ג׳קו מסעדת דגים"
-            fill
-            className="object-cover"
-            priority
-            quality={90}
-          />
+        <div className="relative w-full h-[120%] overflow-hidden" ref={emblaRef}>
+          <div className="flex h-full">
+            {heroImages.map((image, index) => (
+              <div key={index} className="relative flex-[0_0_100%] min-w-0">
+                <Image
+                  src={image}
+                  alt={`ג׳קו מסעדת דגים ${index + 1}`}
+                  fill
+                  className="object-cover"
+                  priority={index === 0}
+                  quality={90}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </motion.div>
 
@@ -145,6 +183,27 @@ const HeroSection = () => {
             </Link>
           </motion.div>
         </motion.div>
+      </motion.div>
+
+      {/* Carousel Indicators */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 1 }}
+        className="absolute bottom-24 left-1/2 transform -translate-x-1/2 z-30 flex gap-2"
+      >
+        {heroImages.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => scrollTo(index)}
+            className={`h-2 rounded-full transition-all ${
+              index === selectedIndex
+                ? 'w-8 bg-yellow-accent'
+                : 'w-2 bg-white/50 hover:bg-white/70'
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
       </motion.div>
 
       {/* Scroll Indicator */}
