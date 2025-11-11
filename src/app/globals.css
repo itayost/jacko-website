@@ -56,12 +56,12 @@
   }
 
   .custom-scrollbar::-webkit-scrollbar-thumb {
-    background: rgb(var(--blue-primary));
+    background: #3f88c5;
     border-radius: 4px;
   }
 
   .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    background: rgb(var(--blue-dark));
+    background: #356fa3;
   }
 
   /* Hide scrollbar but keep functionality */
@@ -75,48 +75,23 @@
 }
 
 @layer components {
-  /* Card Hover Effect - Subtle, Shtsupak style */
+  /* Card Hover Effect */
   .card-hover {
-    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+    @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-xl;
   }
 
-  /* Button Base - Shtsupak-inspired structure with your blue colors */
+  /* Button Base */
   .btn-base {
-    @apply rounded-md font-semibold transition-all duration-300 hover:shadow-md px-6 py-3;
+    @apply rounded-full font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg;
   }
 
-  .btn-primary {
-    background-color: rgb(var(--blue-primary));
-    @apply text-white rounded-md font-semibold transition-all duration-300;
-  }
-
-  .btn-primary:hover {
-    background-color: rgb(var(--blue-dark));
-    @apply shadow-lg;
-  }
-
-  .btn-secondary {
-    @apply bg-white text-black border-2 rounded-md font-semibold transition-all duration-300;
-    border-color: rgb(var(--blue-primary));
-  }
-
-  .btn-secondary:hover {
-    background-color: rgb(var(--blue-primary));
-    @apply text-white;
-  }
-
-  /* Container - More generous padding (Shtsupak style) */
+  /* Container */
   .container-custom {
-    @apply mx-auto px-6 sm:px-8 lg:px-12 max-w-7xl;
+    @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
   }
 
-  /* Section Padding - Generous whitespace (Shtsupak style) */
+  /* Section Padding */
   .section-padding {
-    @apply py-20 md:py-32;
-  }
-
-  /* Section with light gray background */
-  .section-gray {
-    @apply bg-gray-100;
+    @apply py-16 md:py-24;
   }
 }
