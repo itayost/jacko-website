@@ -49,7 +49,7 @@ const MenuPreview = () => {
   }
 
   return (
-    <section className="py-24 bg-white" id="menu">
+    <section className="py-20 bg-blue-primary" id="menu">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <motion.div
@@ -59,11 +59,10 @@ const MenuPreview = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-blue-primary mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
              אז איך אתם אוהבים את הדג שלכם?
           </h2>
-          <div className="w-24 h-1 bg-yellow-accent mx-auto mb-6"></div>
-          <p className="text-xl text-gray-700 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 max-w-2xl mx-auto">
             בחרו את שיטת ההכנה המועדפת עליכם וגלו את המנות המושלמות בשבילכם
           </p>
         </motion.div>
@@ -80,38 +79,38 @@ const MenuPreview = () => {
               className="group"
             >
               <Link href="/menu">
-                <div className="relative h-[380px] rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 overflow-hidden cursor-pointer border-2 border-gray-100">
+                <div className="relative h-[350px] rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden cursor-pointer">
                   {/* Full Background Image */}
                   <div className="absolute inset-0">
                     <Image
                       src={prep.image}
                       alt={prep.title}
                       fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-700"
+                      className="object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                   </div>
-
+                  
                   {/* Gradient Overlays */}
                   <div className="absolute inset-0">
                     {/* Subtle darkening */}
-                    <div className="absolute inset-0 bg-black/30" />
-
+                    <div className="absolute inset-0 bg-black/20" />
+                    
                     {/* Bottom gradient */}
                     <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-blue-secondary via-blue-primary/80 to-transparent" />
                   </div>
-
+                  
                   {/* Content positioned at bottom */}
                   <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
-                    <h3 className="text-2xl font-bold text-white mb-3 drop-shadow-lg">
+                    <h3 className="text-2xl font-bold text-white mb-2 drop-shadow-lg">
                       {prep.title}
                     </h3>
-                    <p className="text-white/95 text-base leading-relaxed drop-shadow">
+                    <p className="text-white/90 text-sm leading-relaxed drop-shadow">
                       {prep.description}
                     </p>
                   </div>
-
+                  
                   {/* Bottom Accent Bar */}
-                  <div className="absolute bottom-0 left-0 right-0 h-2 bg-yellow-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 z-20" />
+                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-yellow-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 z-20" />
                 </div>
               </Link>
             </motion.div>
@@ -215,14 +214,14 @@ const MenuPreview = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
-          className="text-center mt-4"
+          className="text-center"
         >
-          <p className="text-lg text-gray-600 mb-6">
+          <p className="text-lg text-white/80 mb-6">
             לא יכולים להחליט? אנחנו כאן כדי לעזור!
           </p>
           <Link
             href="/menu"
-            className="inline-block bg-blue-primary text-white px-10 py-4 rounded-full font-semibold text-lg hover:bg-blue-dark transition-all hover:-translate-y-1 hover:shadow-xl shadow-lg"
+            className="inline-block bg-white text-blue-primary px-8 py-3 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all hover:-translate-y-0.5 hover:shadow-lg"
           >
             גלו את התפריט המלא
           </Link>

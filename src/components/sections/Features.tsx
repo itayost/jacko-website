@@ -24,7 +24,7 @@ const features = [
 
 const Features = () => {
   return (
-    <section className="py-24 bg-gradient-to-br from-blue-primary via-blue-primary to-blue-secondary">
+    <section className="py-20 bg-blue-primary">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <motion.div
@@ -37,8 +37,7 @@ const Features = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             למה ג׳קו?
           </h2>
-          <div className="w-24 h-1 bg-yellow-accent mx-auto mb-6"></div>
-          <p className="text-xl text-white/95 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 max-w-2xl mx-auto">
             המסורת, הטעם והאיכות שעושים את ההבדל
           </p>
         </motion.div>
@@ -54,7 +53,7 @@ const Features = () => {
               viewport={{ once: true }}
               className="group"
             >
-              <div className="relative h-[420px] rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 overflow-hidden border-2 border-white/10">
+              <div className="relative h-[400px] rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 overflow-hidden">
                 {/* Full Background Image */}
                 <div className="absolute inset-0">
                   <Image
@@ -85,7 +84,7 @@ const Features = () => {
                 </div>
                 
                 {/* Bottom Accent Bar */}
-                <div className="absolute bottom-0 left-0 right-0 h-2 bg-yellow-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 z-20" />
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-yellow-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 z-20" />
               </div>
             </motion.div>
           ))}
@@ -97,11 +96,11 @@ const Features = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
-          className="text-center mt-16"
+          className="text-center mt-12"
         >
           <a
             href="/about"
-            className="inline-block bg-white text-blue-primary px-10 py-4 rounded-full font-semibold text-lg hover:bg-gray-50 transition-all hover:-translate-y-1 hover:shadow-xl shadow-lg"
+            className="inline-block bg-white text-blue-primary px-8 py-3 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all hover:-translate-y-0.5 hover:shadow-lg"
           >
             קראו עוד אודותינו
           </a>
