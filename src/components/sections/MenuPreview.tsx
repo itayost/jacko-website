@@ -54,8 +54,8 @@ const MenuPreview = () => {
               className="w-full"
             >
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-                {/* Image - Left on even, Right on odd */}
-                <div className={`relative h-[600px] overflow-hidden ${!isEven ? 'lg:order-2' : ''}`}>
+                {/* Image - Second on mobile, Left on even desktop, Right on odd desktop */}
+                <div className={`relative h-[600px] overflow-hidden order-2 ${!isEven ? 'lg:order-2' : 'lg:order-1'}`}>
                   <Image
                     src={section.image}
                     alt={section.title}
@@ -66,8 +66,8 @@ const MenuPreview = () => {
                   <div className="absolute inset-0 bg-black/10" />
                 </div>
 
-                {/* Content - Right on even, Left on odd */}
-                <div className={`bg-blue-primary h-[600px] flex items-center justify-center px-8 md:px-16 ${!isEven ? 'lg:order-1' : ''}`}>
+                {/* Content - First on mobile, Right on even desktop, Left on odd desktop */}
+                <div className={`bg-blue-primary h-[600px] flex items-center justify-center px-8 md:px-16 order-1 ${!isEven ? 'lg:order-1' : 'lg:order-2'}`}>
                   <div className="text-center text-white max-w-xl">
                     <h3 className="text-3xl md:text-4xl font-bold mb-6">
                       {section.title}
