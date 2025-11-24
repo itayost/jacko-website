@@ -10,7 +10,7 @@ const Features = () => {
       {/* Full-width Story Layout - Equal heights, minimal gaps */}
       <div className="w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
-          {/* Left Video/Image */}
+          {/* Left Video/Image - Desktop only */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -22,6 +22,24 @@ const Features = () => {
               <Image
                 src="/images/gallery/family-cooking.jpg"
                 alt="משפחת ג'קו"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </motion.div>
+
+          {/* Mobile Image - Shows only on mobile */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="lg:hidden"
+          >
+            <div className="relative h-[300px] overflow-hidden">
+              <Image
+                src="/images/gallery/fresh-fish.jpg"
+                alt="דגים טריים"
                 fill
                 className="object-cover"
               />
