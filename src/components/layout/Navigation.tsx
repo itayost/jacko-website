@@ -64,7 +64,7 @@ const Navigation = () => {
             <li>
               <Link
                 href="/contact#reservation"
-                className="bg-blue-primary text-white px-6 py-2.5 rounded-full font-semibold hover:bg-blue-dark transition-all hover:-translate-y-0.5 hover:shadow-lg"
+                className="bg-blue-primary text-white px-6 py-2.5 font-semibold hover:bg-blue-dark transition-all hover:shadow-md"
               >
                 הזמן שולחן
               </Link>
@@ -105,7 +105,7 @@ const Navigation = () => {
               <li>
                 <Link
                   href="/contact#reservation"
-                  className="bg-blue-primary text-white px-6 py-2.5 rounded-full font-semibold inline-block text-center w-full"
+                  className="bg-blue-primary text-white px-6 py-2.5 font-semibold inline-block text-center w-full"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   הזמן שולחן

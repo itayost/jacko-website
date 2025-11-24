@@ -4,21 +4,37 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion'
 import { ChevronDown } from 'lucide-react'
+
+const heroImages = [
+  '/images/hero-bg.jpg',
+  '/images/gallery/grilled-fish.jpg',
+  '/images/gallery/fresh-fish.jpg',
+]
 
 const HeroSection = () => {
   const [offsetY, setOffsetY] = useState(0)
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const { scrollY } = useScroll()
-  
+
   // Parallax transform
   const y = useTransform(scrollY, [0, 500], [0, 150])
   const opacity = useTransform(scrollY, [0, 300], [1, 0])
-  
+
   useEffect(() => {
     const handleScroll = () => setOffsetY(window.pageYOffset)
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  // Image carousel - auto-rotate every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % heroImages.length)
+    }, 5000)
+
+    return () => clearInterval(interval)
   }, [])
 
   const scrollToContent = () => {
@@ -30,20 +46,33 @@ const HeroSection = () => {
 
   return (
     <section className="relative h-screen overflow-hidden">
-      {/* Parallax Background Image */}
-      <motion.div 
+      {/* Parallax Background Image Carousel */}
+      <motion.div
         className="absolute inset-0 z-0"
         style={{ y }}
       >
         <div className="relative w-full h-[120%]">
-          <Image
-            src="/images/hero-bg.jpg"
-            alt="ג׳קו מסעדת דגים"
-            fill
-            className="object-cover"
-            priority
-            quality={90}
-          />
+          <AnimatePresence>
+            {heroImages[currentImageIndex] && (
+              <motion.div
+                key={currentImageIndex}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 1.5, ease: "easeInOut" }}
+                className="absolute inset-0"
+              >
+                <Image
+                  src={heroImages[currentImageIndex]}
+                  alt="ג׳קו מסעדת דגים"
+                  fill
+                  className="object-cover"
+                  priority={currentImageIndex === 0}
+                  quality={90}
+                />
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </motion.div>
 
@@ -133,13 +162,13 @@ const HeroSection = () => {
           >
             <Link
               href="/menu"
-              className="bg-white text-blue-primary px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-all hover:shadow-xl"
+              className="bg-white text-blue-primary px-8 py-3 font-semibold hover:bg-gray-100 transition-all hover:shadow-lg"
             >
               לתפריט שלנו
             </Link>
             <Link
               href="/contact#reservation"
-              className="bg-yellow-accent text-black px-8 py-3 rounded-full font-semibold hover:bg-yellow-dark transition-all hover:shadow-xl border-2 border-white/30"
+              className="bg-yellow-accent text-black px-8 py-3 font-semibold hover:bg-yellow-dark transition-all hover:shadow-lg border-2 border-white/30"
             >
               הזמן שולחן
             </Link>

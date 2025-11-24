@@ -8,223 +8,113 @@ import { Phone, MapPin, Clock, Mail } from 'lucide-react'
 
 const Contact = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-blue-primary to-blue-secondary overflow-x-hidden" id="contact">
-      <div className="container mx-auto px-4">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            בואו לבקר אותנו
-          </h2>
-          <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            נשמח לארח אתכם במסעדה שלנו
-          </p>
-        </motion.div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Info - Mobile: no X animation, Desktop: X animation */}
+    <section className="overflow-x-hidden" id="contact">
+      {/* Full-Width Split Section: Contact Info + Form */}
+      <div className="w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-0">
+          {/* Contact Info - 40% (2 cols) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ 
-              opacity: 1, 
-              y: 0,
-              x: 0 
-            }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="space-y-8"
+            className="lg:col-span-2 bg-gradient-to-b from-blue-primary to-blue-secondary p-12"
           >
-            {/* Address */}
-            <motion.div 
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.4, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="flex items-start gap-4"
-            >
-              <div className="bg-white text-blue-primary p-3 rounded-full shrink-0">
-                <MapPin size={24} />
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-white mb-2">כתובת</h3>
-                <p className="text-white/80">גיבורי ישראל 7, נתניה</p>
-                <a 
-                  href="https://maps.google.com/?q=גיבורי+ישראל+7+נתניה"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-yellow-accent hover:underline text-sm mt-1 inline-block"
-                >
-                  הצג במפה ←
-                </a>
-              </div>
-            </motion.div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
+              בואו לבקר אותנו
+            </h2>
 
-            {/* Phone */}
-            <motion.div 
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.4, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="flex items-start gap-4"
-            >
-              <div className="bg-white text-blue-primary p-3 rounded-full shrink-0">
-                <Phone size={24} />
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-white mb-2">טלפון</h3>
-                <a href="tel:09-8652878" className="text-white/80 hover:text-yellow-accent transition-colors text-lg font-medium">
-                  09-8652878
-                </a>
-              </div>
-            </motion.div>
-
-            {/* Hours */}
-            <motion.div 
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.4, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="flex items-start gap-4"
-            >
-              <div className="bg-white text-blue-primary p-3 rounded-full shrink-0">
-                <Clock size={24} />
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-white mb-2">שעות פתיחה</h3>
-                <div className="space-y-1 text-white/80">
-                  <p>ראשון - חמישי: 12:00 - 22:30</p>
-                  <p>שישי: 12:00 - 23:00</p>
-                  <p>שבת: 12:00 - 22:30</p>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Email */}
-            <motion.div 
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.4, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="flex items-start gap-4"
-            >
-              <div className="bg-white text-blue-primary p-3 rounded-full shrink-0">
-                <Mail size={24} />
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-white mb-2">אימייל</h3>
-                <a href="mailto:info@jacko-seafood.co.il" className="text-white/80 hover:text-yellow-accent transition-colors">
-                  info@jacko-seafood.co.il
-                </a>
-              </div>
-            </motion.div>
-
-            {/* Social Media */}
-            <motion.div 
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.4, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="flex items-start gap-4"
-            >
-          <div>
-            <h3 className="text-xl font-semibold text-white mb-2">עקבו אחרינו</h3>
-            <SocialLinks
-              facebook={contactInfo.social.facebook}
-              instagram={contactInfo.social.instagram}
-              tiktok={contactInfo.social.tiktok}
-            />
-          </div>
-            </motion.div>
-          </motion.div>
-
-          {/* Reservation Form - Mobile: no X animation, Desktop: subtle fade */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ 
-              opacity: 1, 
-              y: 0,
-              x: 0 
-            }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="bg-white/95 backdrop-blur rounded-2xl shadow-xl p-6 md:p-8"
-            id="reservation"
-          >
-            <h3 className="text-2xl font-bold text-blue-primary mb-6">הזמנת שולחן</h3>
-            <form className="space-y-4">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">שם מלא</label>
-                  <input
-                    type="text"
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-blue-primary focus:outline-none transition-colors"
-                    placeholder="ישראל ישראלי"
-                  />
+            <div className="space-y-6">
+              {/* Address */}
+              <div className="flex items-start gap-4">
+                <div className="bg-white text-blue-primary p-3 rounded-full shrink-0">
+                  <MapPin size={24} />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">טלפון</label>
-                  <input
-                    type="tel"
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-blue-primary focus:outline-none transition-colors"
-                    placeholder="050-1234567"
-                    dir="ltr"
-                  />
+                  <h3 className="text-xl font-semibold text-white mb-2">כתובת</h3>
+                  <p className="text-white/80">גיבורי ישראל 7, נתניה</p>
+                  <a
+                    href="https://maps.google.com/?q=גיבורי+ישראל+7+נתניה"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-yellow-accent hover:underline text-sm mt-1 inline-block"
+                  >
+                    הצג במפה ←
+                  </a>
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {/* Phone */}
+              <div className="flex items-start gap-4">
+                <div className="bg-white text-blue-primary p-3 rounded-full shrink-0">
+                  <Phone size={24} />
+                </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">תאריך</label>
-                  <input
-                    type="date"
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-blue-primary focus:outline-none transition-colors"
-                  />
+                  <h3 className="text-xl font-semibold text-white mb-2">טלפון</h3>
+                  <a href="tel:09-8652878" className="text-white/80 hover:text-yellow-accent transition-colors text-lg font-medium">
+                    09-8652878
+                  </a>
+                </div>
+              </div>
+
+              {/* Hours */}
+              <div className="flex items-start gap-4">
+                <div className="bg-white text-blue-primary p-3 rounded-full shrink-0">
+                  <Clock size={24} />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">שעה</label>
-                  <input
-                    type="time"
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-blue-primary focus:outline-none transition-colors"
-                  />
+                  <h3 className="text-xl font-semibold text-white mb-2">שעות פתיחה</h3>
+                  <div className="space-y-1 text-white/80">
+                    <p>ראשון - חמישי: 12:00 - 22:30</p>
+                    <p>שישי: 12:00 - 23:00</p>
+                    <p>שבת: 12:00 - 22:30</p>
+                  </div>
                 </div>
               </div>
 
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">מספר סועדים</label>
-                <select className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-blue-primary focus:outline-none transition-colors">
-                  <option>בחר מספר סועדים</option>
-                  {[1,2,3,4,5,6,7,8,9,10].map(num => (
-                    <option key={num} value={num}>{num} סועדים</option>
-                  ))}
-                  <option value="more">יותר מ-10</option>
-                </select>
+              {/* Email */}
+              <div className="flex items-start gap-4">
+                <div className="bg-white text-blue-primary p-3 rounded-full shrink-0">
+                  <Mail size={24} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-2">אימייל</h3>
+                  <a href="mailto:info@jacko-seafood.co.il" className="text-white/80 hover:text-yellow-accent transition-colors">
+                    info@jacko-seafood.co.il
+                  </a>
+                </div>
               </div>
 
+              {/* Social Media */}
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">הערות מיוחדות</label>
-                <textarea
-                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-blue-primary focus:outline-none transition-colors resize-none"
-                  rows={3}
-                  placeholder="אלרגיות, אירועים מיוחדים, בקשות מיוחדות..."
+                <h3 className="text-xl font-semibold text-white mb-4">עקבו אחרינו</h3>
+                <SocialLinks
+                  facebook={contactInfo.social.facebook}
+                  instagram={contactInfo.social.instagram}
+                  tiktok={contactInfo.social.tiktok}
                 />
               </div>
+            </div>
+          </motion.div>
 
-              <button
-                type="submit"
-                className="w-full bg-blue-primary text-white py-3 rounded-full font-semibold hover:bg-blue-dark transition-all hover:shadow-lg"
-              >
-                שלח הזמנה
-              </button>
-
-              <p className="text-center text-sm text-gray-500">
-                או התקשרו אלינו: <a href="tel:09-8652878" className="text-blue-primary font-medium">09-8652878</a>
-              </p>
-            </form>
+          {/* Map - 60% (3 cols) */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="lg:col-span-3 relative h-[600px]"
+          >
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3359.6234567890!2d34.8577!3d32.3335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzLCsDIwJzAwLjYiTiAzNMKwNTEnMjcuNyJF!5e0!3m2!1sen!2sil!4v1234567890"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="מפת מיקום מסעדת ג'קו"
+            />
           </motion.div>
         </div>
       </div>
