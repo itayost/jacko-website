@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 const Features = () => {
   return (
-    <section className="bg-blue-primary relative overflow-hidden">
+    <section className="bg-white relative overflow-hidden">
       {/* Full-width Story Layout - Equal heights, minimal gaps */}
       <div className="w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
@@ -54,10 +54,10 @@ const Features = () => {
             viewport={{ once: true }}
             className="lg:col-span-6"
           >
-            <div className="bg-blue-primary h-full flex items-center justify-center px-8 md:px-16 py-12">
-              <div className="space-y-6 text-white text-center">
+            <div className="bg-white h-full flex items-center justify-center px-8 md:px-16 py-12">
+              <div className="space-y-6 text-gray-800 text-center">
                 {/* Section Header */}
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
                   הסיפור שלנו
                 </h2>
 
@@ -78,7 +78,7 @@ const Features = () => {
                 <div className="mt-10">
                   <a
                     href="/about"
-                    className="inline-block bg-white text-blue-primary px-8 py-3 font-semibold text-lg hover:bg-gray-100 transition-all hover:shadow-md"
+                    className="inline-block bg-blue-primary text-white px-8 py-3 font-semibold text-lg hover:bg-blue-dark transition-all hover:shadow-md"
                   >
                     קראו עוד אודותינו
                   </a>

@@ -38,7 +38,7 @@ const sections = [
 
 const MenuPreview = () => {
   return (
-    <section className="bg-blue-primary" id="menu">
+    <section className="bg-white" id="menu">
       {/* Alternating Full-Width Rows */}
       <div className="w-full">
         {sections.map((section, index) => {
@@ -67,17 +67,17 @@ const MenuPreview = () => {
                 </div>
 
                 {/* Content - First on mobile, Right on even desktop, Left on odd desktop */}
-                <div className={`bg-blue-primary h-[600px] flex items-center justify-center px-8 md:px-16 order-1 ${!isEven ? 'lg:order-1' : 'lg:order-2'}`}>
-                  <div className="text-center text-white max-w-xl">
-                    <h3 className="text-3xl md:text-4xl font-bold mb-6">
+                <div className={`bg-white h-[600px] flex items-center justify-center px-8 md:px-16 order-1 ${!isEven ? 'lg:order-1' : 'lg:order-2'}`}>
+                  <div className="text-center text-gray-800 max-w-xl">
+                    <h3 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
                       {section.title}
                     </h3>
-                    <p className="text-lg md:text-xl leading-relaxed mb-8 text-white/90">
+                    <p className="text-lg md:text-xl leading-relaxed mb-8 text-gray-600">
                       {section.description}
                     </p>
                     <Link
                       href={section.buttonLink}
-                      className="inline-block bg-white text-blue-primary px-8 py-3 font-semibold text-lg hover:bg-gray-100 transition-all hover:shadow-md"
+                      className="inline-block bg-blue-primary text-white px-8 py-3 font-semibold text-lg hover:bg-blue-dark transition-all hover:shadow-md"
                     >
                       {section.buttonText}
                     </Link>

@@ -18,26 +18,26 @@ const Contact = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="lg:col-span-2 bg-gradient-to-b from-blue-primary to-blue-secondary p-12"
+            className="lg:col-span-2 bg-white p-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
               בואו לבקר אותנו
             </h2>
 
             <div className="space-y-6">
               {/* Address */}
               <div className="flex items-start gap-4">
-                <div className="bg-white text-blue-primary p-3 rounded-full shrink-0">
+                <div className="bg-blue-primary text-white p-3 rounded-full shrink-0">
                   <MapPin size={24} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">כתובת</h3>
-                  <p className="text-white/80">גיבורי ישראל 7, נתניה</p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">כתובת</h3>
+                  <p className="text-gray-600">גיבורי ישראל 7, נתניה</p>
                   <a
                     href="https://maps.google.com/?q=גיבורי+ישראל+7+נתניה"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-yellow-accent hover:underline text-sm mt-1 inline-block"
+                    className="text-blue-primary hover:underline text-sm mt-1 inline-block"
                   >
                     הצג במפה ←
                   </a>
@@ -46,12 +46,12 @@ const Contact = () => {
 
               {/* Phone */}
               <div className="flex items-start gap-4">
-                <div className="bg-white text-blue-primary p-3 rounded-full shrink-0">
+                <div className="bg-blue-primary text-white p-3 rounded-full shrink-0">
                   <Phone size={24} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">טלפון</h3>
-                  <a href="tel:09-8652878" className="text-white/80 hover:text-yellow-accent transition-colors text-lg font-medium">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">טלפון</h3>
+                  <a href="tel:09-8652878" className="text-gray-600 hover:text-blue-primary transition-colors text-lg font-medium">
                     09-8652878
                   </a>
                 </div>
@@ -59,12 +59,12 @@ const Contact = () => {
 
               {/* Hours */}
               <div className="flex items-start gap-4">
-                <div className="bg-white text-blue-primary p-3 rounded-full shrink-0">
+                <div className="bg-blue-primary text-white p-3 rounded-full shrink-0">
                   <Clock size={24} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">שעות פתיחה</h3>
-                  <div className="space-y-1 text-white/80">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">שעות פתיחה</h3>
+                  <div className="space-y-1 text-gray-600">
                     <p>ראשון - חמישי: 12:00 - 22:30</p>
                     <p>שישי: 12:00 - 23:00</p>
                     <p>שבת: 12:00 - 22:30</p>
@@ -74,12 +74,12 @@ const Contact = () => {
 
               {/* Email */}
               <div className="flex items-start gap-4">
-                <div className="bg-white text-blue-primary p-3 rounded-full shrink-0">
+                <div className="bg-blue-primary text-white p-3 rounded-full shrink-0">
                   <Mail size={24} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">אימייל</h3>
-                  <a href="mailto:info@jacko-seafood.co.il" className="text-white/80 hover:text-yellow-accent transition-colors">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">אימייל</h3>
+                  <a href="mailto:info@jacko-seafood.co.il" className="text-gray-600 hover:text-blue-primary transition-colors">
                     info@jacko-seafood.co.il
                   </a>
                 </div>
@@ -87,7 +87,7 @@ const Contact = () => {
 
               {/* Social Media */}
               <div>
-                <h3 className="text-xl font-semibold text-white mb-4">עקבו אחרינו</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">עקבו אחרינו</h3>
                 <SocialLinks
                   facebook={contactInfo.social.facebook}
                   instagram={contactInfo.social.instagram}
