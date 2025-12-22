@@ -1,9 +1,27 @@
 // src/components/sections/Features.tsx
 'use client'
 
+import { useRef, useEffect } from 'react'
 import { motion } from 'framer-motion'
 
 const Features = () => {
+  const videoRef1 = useRef<HTMLVideoElement>(null)
+  const videoRef2 = useRef<HTMLVideoElement>(null)
+  const videoRef3 = useRef<HTMLVideoElement>(null)
+
+  useEffect(() => {
+    // Safari fix: programmatically set muted and play
+    const videos = [videoRef1.current, videoRef2.current, videoRef3.current]
+    videos.forEach(video => {
+      if (video) {
+        video.muted = true
+        video.play().catch(() => {
+          // Autoplay was prevented, ignore error
+        })
+      }
+    })
+  }, [])
+
   return (
     <section className="bg-white relative overflow-hidden">
       {/* Full-width Story Layout - Equal heights, minimal gaps */}
@@ -19,6 +37,7 @@ const Features = () => {
           >
             <div className="relative h-[500px] overflow-hidden">
               <video
+                ref={videoRef1}
                 autoPlay
                 loop
                 muted
@@ -41,6 +60,7 @@ const Features = () => {
           >
             <div className="relative h-[300px] overflow-hidden">
               <video
+                ref={videoRef2}
                 autoPlay
                 loop
                 muted
@@ -104,6 +124,7 @@ const Features = () => {
           >
             <div className="relative h-[500px] overflow-hidden">
               <video
+                ref={videoRef3}
                 autoPlay
                 loop
                 muted
