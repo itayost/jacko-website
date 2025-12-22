@@ -2,7 +2,6 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import Image from 'next/image'
 
 const Features = () => {
   return (
@@ -10,7 +9,7 @@ const Features = () => {
       {/* Full-width Story Layout - Equal heights, minimal gaps */}
       <div className="w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
-          {/* Left Video/Image - Desktop only */}
+          {/* Left Video - Desktop only */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -19,16 +18,20 @@ const Features = () => {
             className="lg:col-span-3 hidden lg:block"
           >
             <div className="relative h-[500px] overflow-hidden">
-              <Image
-                src="/images/gallery/family-cooking.jpg"
-                alt="משפחת ג'קו"
-                fill
-                className="object-cover"
-              />
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover"
+              >
+                <source src="/videos/homepage/wine.webm" type="video/webm" />
+                <source src="/videos/homepage/wine.mp4" type="video/mp4" />
+              </video>
             </div>
           </motion.div>
 
-          {/* Mobile Image - Shows only on mobile */}
+          {/* Mobile Video - Shows only on mobile */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -37,12 +40,16 @@ const Features = () => {
             className="lg:hidden"
           >
             <div className="relative h-[300px] overflow-hidden">
-              <Image
-                src="/images/gallery/fresh-fish.jpg"
-                alt="דגים טריים"
-                fill
-                className="object-cover"
-              />
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover"
+              >
+                <source src="/videos/homepage/fish.webm" type="video/webm" />
+                <source src="/videos/homepage/fish.mp4" type="video/mp4" />
+              </video>
             </div>
           </motion.div>
 
@@ -87,7 +94,7 @@ const Features = () => {
             </div>
           </motion.div>
 
-          {/* Right Video/Image */}
+          {/* Right Video - Desktop only */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -96,12 +103,16 @@ const Features = () => {
             className="lg:col-span-3 hidden lg:block"
           >
             <div className="relative h-[500px] overflow-hidden">
-              <Image
-                src="/images/gallery/fresh-fish.jpg"
-                alt="דגים טריים"
-                fill
-                className="object-cover"
-              />
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover"
+              >
+                <source src="/videos/homepage/fish.webm" type="video/webm" />
+                <source src="/videos/homepage/fish.mp4" type="video/mp4" />
+              </video>
             </div>
           </motion.div>
         </div>
