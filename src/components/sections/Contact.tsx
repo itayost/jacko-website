@@ -8,7 +8,7 @@ import { Phone, MapPin, Clock, Mail } from 'lucide-react'
 
 const Contact = () => {
   return (
-    <section className="overflow-x-hidden" id="contact">
+    <section className="overflow-x-hidden scroll-mt-24" id="contact">
       {/* Full-Width Split Section: Contact Info + Form */}
       <div className="w-full">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-0">
