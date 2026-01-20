@@ -21,7 +21,7 @@ const Navigation = () => {
   const navItems = [
     { href: '/', label: 'בית' },
     { href: '/menu', label: 'תפריט' },
-    { href: '/contact', label: 'צור קשר' },
+    { href: '/#contact', label: 'צור קשר' },
   ]
 
   return (
