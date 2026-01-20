@@ -153,24 +153,18 @@ const HeroSection = () => {
           >
           </motion.div>
 
-          {/* Call to Action Buttons */}
+          {/* Call to Action Button */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.7 }}
-            className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
+            className="mt-10 flex justify-center"
           >
             <Link
               href="/menu"
               className="bg-white text-blue-primary px-8 py-3 font-semibold hover:bg-gray-100 transition-all hover:shadow-lg"
             >
               לתפריט שלנו
-            </Link>
-            <Link
-              href="/contact#reservation"
-              className="bg-yellow-accent text-black px-8 py-3 font-semibold hover:bg-yellow-dark transition-all hover:shadow-lg border-2 border-white/30"
-            >
-              הזמן שולחן
             </Link>
           </motion.div>
         </motion.div>

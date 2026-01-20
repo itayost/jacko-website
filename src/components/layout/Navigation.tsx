@@ -20,7 +20,6 @@ const Navigation = () => {
 
   const navItems = [
     { href: '/', label: 'בית' },
-    { href: '/about', label: 'מי אנחנו' },
     { href: '/menu', label: 'תפריט' },
     { href: '/contact', label: 'צור קשר' },
   ]
@@ -61,14 +60,6 @@ const Navigation = () => {
               <Phone size={18} />
               <a href="tel:09-8652878" className="font-semibold">09-8652878</a>
             </li>
-            <li>
-              <Link
-                href="/contact#reservation"
-                className="bg-blue-primary text-white px-6 py-2.5 font-semibold hover:bg-blue-dark transition-all hover:shadow-md"
-              >
-                הזמן שולחן
-              </Link>
-            </li>
           </ul>
 
           {/* Mobile Menu Button */}
@@ -101,15 +92,6 @@ const Navigation = () => {
                   <Phone size={18} />
                   09-8652878
                 </a>
-              </li>
-              <li>
-                <Link
-                  href="/contact#reservation"
-                  className="bg-blue-primary text-white px-6 py-2.5 font-semibold inline-block text-center w-full"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  הזמן שולחן
-                </Link>
               </li>
             </ul>
           </div>

@@ -8,31 +8,17 @@ import Image from 'next/image'
 const sections = [
   {
     image: '/images/gallery/restaurant-view.jpg',
-    title: '50 שנה של מסורת',
-    description: 'מאז 1973, מסעדת ג\'קו משרתת את קהילת נתניה עם דגים ומאכלי ים טריים. שלושה דורות של מצוינות קולינרית והכנסת אורחים חמה.',
-    buttonText: 'הסיפור שלנו',
-    buttonLink: '/about'
-  },
-  {
-    image: '/images/gallery/fresh-fish.jpg',
-    title: 'המלאי הטרי של היום',
-    description: 'הדגים שלנו מגיעים טריים מדי בוקר ישירות מהדייגים המקומיים. איכות מובטחת, טריות מעולה, טעם שאין לטעות בו.',
-    buttonText: 'התפריט המלא',
-    buttonLink: '/menu'
-  },
-  {
-    image: '/images/gallery/restaurant-view.jpg',
-    title: 'חגגו איתנו',
-    description: 'מושלם לחגיגות משפחתיות, אירועי חברה, וימי הולדת. אנחנו מקבלים קבוצות מכל הגדלים - מזוג אינטימי ועד 100+ אורחים.',
-    buttonText: 'הזמינו שולחן',
-    buttonLink: '/contact#reservation'
+    title: 'מועדון לקוחות',
+    description: 'אם זה תלוי בנו, כבר היינו חברים. אז בואו נסגור את זה, מצטרפים למועדון ג\'קו נתניה ונהנים מהטבות והפתעות מהמטבח לפני כולם.',
+    buttonText: 'הצטרפו עכשיו',
+    buttonLink: '#'
   },
   {
     image: '/images/gallery/grilled-fish.jpg',
-    title: 'עקבו אחר המסע שלנו',
-    description: 'הצטרפו לקהילה שלנו ברשתות החברתיות. מנות מיוחדות יומיות, מבט מאחורי הקלעים, והצצה לחיי המטבח שלנו.',
-    buttonText: 'עקבו אחרינו',
-    buttonLink: '#contact'
+    title: 'אירועים פרטיים',
+    description: 'אתם עושים גם אירועים? בוודאי! אצל ג\'קו נתניה האורחים שלכם יהנו מדגים טריים, פוקאצ\'ות חמות, מנות ילדים וקינוחים. צרו קשר ונתכנן יחד אירוע שהאורחים לא ישכחו.',
+    buttonText: 'צרו קשר',
+    buttonLink: '/contact'
   }
 ]
 

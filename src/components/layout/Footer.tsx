@@ -41,11 +41,6 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-white/80 hover:text-yellow-accent transition-colors">
-                  אודותינו
-                </Link>
-              </li>
-              <li>
                 <Link href="/menu" className="text-white/80 hover:text-yellow-accent transition-colors">
                   התפריט
                 </Link>
@@ -53,11 +48,6 @@ const Footer = () => {
               <li>
                 <Link href="/contact" className="text-white/80 hover:text-yellow-accent transition-colors">
                   צור קשר
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact#reservation" className="text-white/80 hover:text-yellow-accent transition-colors">
-                  הזמנת שולחן
                 </Link>
               </li>
             </ul>
