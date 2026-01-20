@@ -15,7 +15,7 @@ const sections = [
   },
   {
     image: '/images/gallery/grilled-fish.jpg',
-    title: 'אירועים פרטיים',
+    title: 'אירועים בג\'קו',
     description: 'אתם עושים גם אירועים? בוודאי! אצל ג\'קו נתניה האורחים שלכם יהנו מדגים טריים, פוקאצ\'ות חמות, מנות ילדים וקינוחים. צרו קשר ונתכנן יחד אירוע שהאורחים לא ישכחו.',
     buttonText: 'צרו קשר',
     buttonLink: '/#contact'
