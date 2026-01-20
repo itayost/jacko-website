@@ -12,7 +12,7 @@ export default function ContactPage() {
   // Google Maps embed URL for Jacko Seafood Restaurant
   // Address: גיבורי ישראל 7, נתניה
   // This is the actual embed URL from Google Maps for Jacko restaurant
-  const mapEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3052.4711457925455!2d34.86235948729155!3d32.2779413626812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151d40825b74d997%3A0x468b4c60c52d5a55!2z15In16fXlSDXnteQ15vXnNeZINeZ150g16DXqteg15nXlCDXnteq15fXnSDXpNeV15zXkg!5e0!3m2!1siw!2sil!4v1756302240855!5m2!1siw!2sil"
+  const mapEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3373.239640525481!2d34.864024124016126!3d32.27853447387597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151d40825b74d997%3A0x468b4c60c52d5a55!2z15In16fXlSDXnteQ15vXnNeZINeZ150g16DXqteg15nXlCDXnteq15fXnSDXpNeV15zXkg!5e0!3m2!1siw!2sus!4v1768905578137!5m2!1siw!2sus"
   
   // Custom reservation handler
   const handleReservation = async (data: ReservationFormData) => {

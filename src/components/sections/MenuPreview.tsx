@@ -11,7 +11,7 @@ const sections = [
     title: 'מועדון לקוחות',
     description: 'אם זה תלוי בנו, כבר היינו חברים. אז בואו נסגור את זה, מצטרפים למועדון ג\'קו נתניה ונהנים מהטבות והפתעות מהמטבח לפני כולם.',
     buttonText: 'הצטרפו עכשיו',
-    buttonLink: '#'
+    buttonLink: 'https://valuecard.co.il/Forms/5BFB43BA-3A72-42EE-B9BF-1A3C24B06B47'
   },
   {
     image: '/images/gallery/grilled-fish.jpg',
@@ -61,12 +61,23 @@ const MenuPreview = () => {
                     <p className="text-lg md:text-xl leading-relaxed mb-8 text-gray-600">
                       {section.description}
                     </p>
-                    <Link
-                      href={section.buttonLink}
-                      className="inline-block bg-blue-primary text-white px-8 py-3 font-semibold text-lg hover:bg-blue-dark transition-all hover:shadow-md"
-                    >
-                      {section.buttonText}
-                    </Link>
+                    {section.buttonLink.startsWith('http') ? (
+                      <a
+                        href={section.buttonLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block bg-blue-primary text-white px-8 py-3 font-semibold text-lg hover:bg-blue-dark transition-all hover:shadow-md"
+                      >
+                        {section.buttonText}
+                      </a>
+                    ) : (
+                      <Link
+                        href={section.buttonLink}
+                        className="inline-block bg-blue-primary text-white px-8 py-3 font-semibold text-lg hover:bg-blue-dark transition-all hover:shadow-md"
+                      >
+                        {section.buttonText}
+                      </Link>
+                    )}
                   </div>
                 </div>
               </div>

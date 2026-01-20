@@ -106,7 +106,7 @@ const Contact = () => {
             className="lg:col-span-3 relative h-[600px]"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3359.6234567890!2d34.8577!3d32.3335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzLCsDIwJzAwLjYiTiAzNMKwNTEnMjcuNyJF!5e0!3m2!1sen!2sil!4v1234567890"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3373.239640525481!2d34.864024124016126!3d32.27853447387597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151d40825b74d997%3A0x468b4c60c52d5a55!2z15In16fXlSDXnteQ15vXnNeZINeZ150g16DXqteg15nXlCDXnteq15fXnSDXpNeV15zXkg!5e0!3m2!1siw!2sus!4v1768905578137!5m2!1siw!2sus"
               width="100%"
               height="100%"
               style={{ border: 0 }}
