@@ -5,8 +5,8 @@ import type { MenuData, MenuItem } from '@/types/menu'
  * Get all menu items as a flat array with category information
  */
 export function getAllMenuItems(menuData: MenuData): (MenuItem & { category: string })[] {
-  return Object.entries(menuData).flatMap(([category, items]) => 
-    items.map((item: MenuItem) => ({ ...item, category }))
+  return (Object.keys(menuData) as (keyof MenuData)[]).flatMap(category =>
+    menuData[category].map(item => ({ ...item, category }))
   )
 }
 
@@ -16,10 +16,10 @@ export function getAllMenuItems(menuData: MenuData): (MenuItem & { category: str
 export function searchMenuItems(menuData: MenuData, query: string): MenuItem[] {
   const normalizedQuery = query.toLowerCase()
   const allItems = getAllMenuItems(menuData)
-  
-  return allItems.filter(item => 
+
+  return allItems.filter(item =>
     item.name.toLowerCase().includes(normalizedQuery) ||
-    item.description.toLowerCase().includes(normalizedQuery)
+    (item.description && item.description.toLowerCase().includes(normalizedQuery))
   )
 }
 
@@ -27,8 +27,8 @@ export function searchMenuItems(menuData: MenuData, query: string): MenuItem[] {
  * Get menu items by price range
  */
 export function filterByPriceRange(
-  menuData: MenuData, 
-  minPrice: number, 
+  menuData: MenuData,
+  minPrice: number,
   maxPrice: number
 ): MenuItem[] {
   const allItems = getAllMenuItems(menuData)
@@ -39,11 +39,11 @@ export function filterByPriceRange(
  * Sort menu items
  */
 export function sortMenuItems(
-  items: MenuItem[], 
+  items: MenuItem[],
   sortBy: 'price-asc' | 'price-desc' | 'name'
 ): MenuItem[] {
   const sorted = [...items]
-  
+
   switch (sortBy) {
     case 'price-asc':
       return sorted.sort((a, b) => a.price - b.price)

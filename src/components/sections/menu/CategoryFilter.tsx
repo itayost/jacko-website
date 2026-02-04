@@ -46,7 +46,7 @@ export default function CategoryFilter({
       {/* Desktop - with container */}
       <div className="hidden md:block">
         <div className="container mx-auto px-4">
-          <div className="flex justify-center gap-3">
+          <div className="flex justify-center flex-wrap gap-2">
             {categories.map((category) => {
               return (
                 <motion.button
@@ -54,7 +54,7 @@ export default function CategoryFilter({
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => onCategoryChange(category.id as MenuCategoryId)}
-                  className={`flex items-center gap-2 px-6 py-2.5 rounded-full font-medium transition-all ${
+                  className={`flex items-center gap-2 px-4 py-2 rounded-full font-medium text-sm transition-all ${
                     selectedCategory === category.id
                       ? isSticky 
                         ? 'bg-blue-primary text-white shadow-lg'
@@ -74,14 +74,14 @@ export default function CategoryFilter({
 
       {/* Mobile - Edge to edge horizontal scroll */}
       <div className="md:hidden overflow-x-auto no-scrollbar">
-        <div className="flex gap-3 w-max px-4">
+        <div className="flex gap-2 w-max px-4">
           {categories.map((category) => {
             return (
               <motion.button
                 key={category.id}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => onCategoryChange(category.id as MenuCategoryId)}
-                className={`flex items-center gap-2 px-6 py-2.5 rounded-full font-medium transition-all whitespace-nowrap ${
+                className={`flex items-center gap-2 px-4 py-2 rounded-full font-medium text-sm transition-all whitespace-nowrap ${
                   selectedCategory === category.id
                     ? isSticky 
                       ? 'bg-blue-primary text-white'

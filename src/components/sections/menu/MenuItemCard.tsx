@@ -22,10 +22,12 @@ export default function MenuItemCard({ item, index, categoryName }: MenuItemCard
       <div className="flex justify-between items-start mb-3">
         <h3 className="text-xl font-bold text-black pl-20">{item.name}</h3>
         <span className="text-2xl font-bold text-blue-primary whitespace-nowrap">
-          ₪{item.price}
+          {item.priceDisplay ?? `₪${item.price}`}
         </span>
       </div>
-      <p className="text-gray-600 leading-relaxed">{item.description}</p>
+      {item.description && (
+        <p className="text-gray-600 leading-relaxed">{item.description}</p>
+      )}
 
       {/* Category Tag */}
       {categoryName && (

@@ -1,7 +1,7 @@
 // src/components/sections/menu/MenuContainer.tsx
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef, useCallback } from 'react'
 import CategoryFilter from './CategoryFilter'
 import MenuGrid from './MenuGrid'
 import MenuNote from './MenuNote'
@@ -10,6 +10,15 @@ import type { MenuCategoryId } from '@/types/menu'
 
 export default function MenuContainer() {
   const [selectedCategory, setSelectedCategory] = useState<MenuCategoryId>('all')
+  const gridRef = useRef<HTMLDivElement>(null)
+
+  const handleCategoryChange = useCallback((category: MenuCategoryId) => {
+    setSelectedCategory(category)
+    if (gridRef.current) {
+      const top = gridRef.current.getBoundingClientRect().top + window.scrollY - 120
+      window.scrollTo({ top, behavior: 'smooth' })
+    }
+  }, [])
 
   return (
     <>
@@ -17,15 +26,17 @@ export default function MenuContainer() {
       <CategoryFilter
         categories={menuCategories}
         selectedCategory={selectedCategory}
-        onCategoryChange={setSelectedCategory}
+        onCategoryChange={handleCategoryChange}
       />
 
       {/* Menu Items Grid */}
-      <MenuGrid
-        menuData={menuData}
-        selectedCategory={selectedCategory}
-        categories={menuCategories}
-      />
+      <div ref={gridRef}>
+        <MenuGrid
+          menuData={menuData}
+          selectedCategory={selectedCategory}
+          categories={menuCategories}
+        />
+      </div>
 
       {/* Special Note */}
       <div className="bg-gradient-to-b from-blue-primary to-blue-secondary pb-12">

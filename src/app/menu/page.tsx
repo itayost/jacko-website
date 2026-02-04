@@ -4,10 +4,10 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'התפריט',
-  description: 'תפריט מסעדת ג׳קו - מבחר עשיר של דגים טריים, פירות ים, מנות ראשונות ומנות עיקריות. מאז 1973 מגישים את הטוב ביותר מהים.',
+  description: 'תפריט מסעדת ג׳קו - מבחר עשיר של דגים טריים, פירות ים, בשרים, קינוחים, יינות ואלכוהול. מאז 1973 מגישים את הטוב ביותר מהים.',
   openGraph: {
     title: 'תפריט מסעדת ג׳קו | דגים ופירות ים',
-    description: 'גלו את תפריט מסעדת ג׳קו - מבחר עשיר של דגים טריים, פירות ים ומטעמים ים תיכוניים. כל המנות מוכנות מחומרי גלם טריים ואיכותיים.',
+    description: 'גלו את תפריט מסעדת ג׳קו - מבחר עשיר של דגים טריים, פירות ים, בשרים, קינוחים ומשקאות. כל המנות מוכנות מחומרי גלם טריים ואיכותיים.',
     url: '/menu',
     type: 'website',
     images: [
@@ -30,13 +30,8 @@ export default function MenuPage() {
     '@type': 'Menu',
     '@id': '/menu',
     name: 'תפריט מסעדת ג׳קו',
-    description: 'תפריט מסעדת ג׳קו - דגים טריים ופירות ים',
+    description: 'תפריט מסעדת ג׳קו - דגים טריים, פירות ים, בשרים, קינוחים ומשקאות',
     hasMenuSection: [
-      {
-        '@type': 'MenuSection',
-        name: 'מנות ראשונות',
-        hasMenuItem: []
-      },
       {
         '@type': 'MenuSection',
         name: 'דגים',
@@ -44,7 +39,37 @@ export default function MenuPage() {
       },
       {
         '@type': 'MenuSection',
+        name: 'בשרים',
+        hasMenuItem: []
+      },
+      {
+        '@type': 'MenuSection',
         name: 'פירות ים',
+        hasMenuItem: []
+      },
+      {
+        '@type': 'MenuSection',
+        name: 'ארוחות ילדים',
+        hasMenuItem: []
+      },
+      {
+        '@type': 'MenuSection',
+        name: 'סלטים',
+        hasMenuItem: []
+      },
+      {
+        '@type': 'MenuSection',
+        name: 'קינוחים',
+        hasMenuItem: []
+      },
+      {
+        '@type': 'MenuSection',
+        name: 'אלכוהול',
+        hasMenuItem: []
+      },
+      {
+        '@type': 'MenuSection',
+        name: 'יינות',
         hasMenuItem: []
       }
     ],
@@ -66,7 +91,7 @@ export default function MenuPage() {
       <main className="min-h-screen bg-blue-primary">
         {/* Hero Section */}
         <MenuHero />
-        
+
         {/* Menu Content - Categories, Items, and Note */}
         <MenuContainer />
       </main>

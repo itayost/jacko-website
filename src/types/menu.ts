@@ -3,21 +3,27 @@
 export interface MenuCategory {
   id: string
   name: string
+  note?: string
 }
 
 export interface MenuItem {
   name: string
   price: number
-  description: string
+  priceDisplay?: string
+  description?: string
   category?: string
+  subcategory?: string
 }
 
 export interface MenuData {
-  appetizers: MenuItem[]
   fish: MenuItem[]
+  meats: MenuItem[]
   seafood: MenuItem[]
-  mains: MenuItem[]
+  kids: MenuItem[]
+  salads: MenuItem[]
   desserts: MenuItem[]
+  alcohol: MenuItem[]
+  wines: MenuItem[]
 }
 
 export type MenuCategoryId = 'all' | keyof MenuData
