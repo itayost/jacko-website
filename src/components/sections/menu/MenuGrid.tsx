@@ -41,7 +41,7 @@ export default function MenuGrid({ menuData, selectedCategory, categories }: Men
 
                 {/* Category Note */}
                 {cat.note && (
-                  <p className="text-white/80 text-center mb-8 max-w-2xl mx-auto text-sm leading-relaxed">
+                  <p className="text-white/80 text-center mb-8 max-w-2xl mx-auto text-sm leading-relaxed whitespace-pre-line">
                     {cat.note}
                   </p>
                 )}
@@ -85,7 +85,7 @@ export default function MenuGrid({ menuData, selectedCategory, categories }: Men
       <div className="container mx-auto px-4">
         {/* Category Note */}
         {categoryConfig?.note && (
-          <p className="text-white/80 text-center mb-8 max-w-2xl mx-auto text-sm leading-relaxed">
+          <p className="text-white/80 text-center mb-8 max-w-2xl mx-auto text-sm leading-relaxed whitespace-pre-line">
             {categoryConfig.note}
           </p>
         )}
