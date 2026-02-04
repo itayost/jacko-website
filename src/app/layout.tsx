@@ -34,18 +34,18 @@ export const metadata: Metadata = {
     locale: 'he_IL',
     images: [
       {
-        url: '/images/og-image.jpg',
+        url: '/images/og-image.webp',
         width: 1200,
         height: 630,
         alt: 'ג׳קו - מסעדת דגים ומאכלי ים בנתניה',
-        type: 'image/jpeg',
+        type: 'image/webp',
       },
       {
-        url: '/images/logo.png',
+        url: '/images/logo.webp',
         width: 800,
         height: 800,
         alt: 'לוגו ג׳קו',
-        type: 'image/png',
+        type: 'image/webp',
       }
     ],
   },
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'ג׳קו - מסעדת דגים ומאכלי ים | מאז 1973',
     description: 'מסעדת דגים ומאכלי ים מובילה בנתניה. מאז 1973 מגישים את הטעמים האותנטיים של הים התיכון.',
-    images: ['/images/og-image.jpg'],
+    images: ['/images/og-image.webp'],
     creator: '@jackonetanya', // Update with actual Twitter handle
     site: '@jackonetanya', // Update with actual Twitter handle
   },
@@ -109,7 +109,7 @@ export const metadata: Metadata = {
   
   other: {
     'msapplication-TileColor': '#0066cc',
-    'msapplication-TileImage': '/images/logo.png',
+    'msapplication-TileImage': '/images/logo.webp',
     'theme-color': '#0066cc',
   },
 }
@@ -125,8 +125,8 @@ export default function RootLayout({
     '@id': baseUrl,
     name: 'ג׳קו - מסעדת דגים ומאכלי ים',
     image: [
-      `${baseUrl}/images/og-image.jpg`,
-      `${baseUrl}/images/logo.png`
+      `${baseUrl}/images/og-image.webp`,
+      `${baseUrl}/images/logo.webp`
     ],
     url: baseUrl,
     telephone: '+972-9-8652878',
@@ -172,7 +172,7 @@ export default function RootLayout({
     foundingDate: '1973',
     logo: {
       '@type': 'ImageObject',
-      url: `${baseUrl}/images/logo.png`
+      url: `${baseUrl}/images/logo.webp`
     },
     sameAs: [
       'https://www.facebook.com/jako.rest/',

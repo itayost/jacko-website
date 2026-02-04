@@ -8,9 +8,9 @@ import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion'
 import { ChevronDown } from 'lucide-react'
 
 const heroImages = [
-  '/images/hero-bg.jpg',
-  '/images/gallery/grilled-fish.jpg',
-  '/images/gallery/fresh-fish.jpg',
+  '/images/hero-bg.webp',
+  '/images/gallery/grilled-fish.webp',
+  '/images/gallery/fresh-fish.webp',
 ]
 
 const HeroSection = () => {
@@ -110,7 +110,7 @@ const HeroSection = () => {
             }}
           >
             <Image
-              src="/images/logo.png"
+              src="/images/logo.webp"
               alt="ג׳קו"
               width={300}
               height={300}

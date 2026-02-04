@@ -35,7 +35,7 @@ const Navigation = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
-              src="/images/logo.png"
+              src="/images/logo.webp"
               alt="ג׳קו מאכלי ים"
               width={isScrolled ? 50 : 60}
               height={isScrolled ? 50 : 60}

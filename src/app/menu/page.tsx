@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/hero-bg.jpg',
+        url: '/images/hero-bg.webp',
         width: 1200,
         height: 630,
         alt: 'תפריט מסעדת ג׳קו - דגים ופירות ים',

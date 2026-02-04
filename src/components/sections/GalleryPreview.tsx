@@ -6,14 +6,14 @@ import Image from 'next/image'
 import { useRef, useState, useEffect } from 'react'
 
 const galleryImages = [
-  '/images/gallery/grilled-fish.jpg',
-  '/images/gallery/fresh-fish.jpg',
-  '/images/gallery/baked-fish.jpg',
-  '/images/gallery/fried-fish.jpg',
-  '/images/gallery/restaurant-view.jpg',
-  '/images/gallery/family-cooking.jpg',
-  '/images/gallery/raw-fish.jpg',
-  '/images/hero-bg.jpg'
+  '/images/gallery/grilled-fish.webp',
+  '/images/gallery/fresh-fish.webp',
+  '/images/gallery/baked-fish.webp',
+  '/images/gallery/fried-fish.webp',
+  '/images/gallery/restaurant-view.webp',
+  '/images/gallery/family-cooking.webp',
+  '/images/gallery/raw-fish.webp',
+  '/images/hero-bg.webp'
 ]
 
 const GalleryPreview = () => {

@@ -18,7 +18,7 @@ const Footer = () => {
           <div>
             <div className="mb-4">
               <Image
-                src="/images/logo.png"
+                src="/images/logo.webp"
                 alt="ג׳קו מאכלי ים"
                 width={80}
                 height={80}

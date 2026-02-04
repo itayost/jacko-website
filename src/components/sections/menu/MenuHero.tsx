@@ -11,7 +11,7 @@ interface MenuHeroProps {
 }
 
 export default function MenuHero({ 
-  backgroundImage = '/images/hero/menu-hero.jpg',
+  backgroundImage = '/images/hero/menu-hero.webp',
   title = 'התפריט שלנו',
   subtitle = 'מבחר עשיר של מנות דגים ופירות ים טריים, מוכנים בשיטות בישול מסורתיות ומודרניות'
 }: MenuHeroProps) {
