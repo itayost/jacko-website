@@ -1,5 +1,7 @@
 // src/app/menu/page.tsx
 import { MenuHero, MenuContainer } from '@/components/sections/menu'
+import { menuData, menuCategories } from '@/data/menu'
+import type { MenuData } from '@/types/menu'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -31,48 +33,23 @@ export default function MenuPage() {
     '@id': '/menu',
     name: 'תפריט מסעדת ג׳קו',
     description: 'תפריט מסעדת ג׳קו - דגים טריים, פירות ים, בשרים, קינוחים ומשקאות',
-    hasMenuSection: [
-      {
+    hasMenuSection: (Object.keys(menuData) as (keyof MenuData)[]).map(key => {
+      const cat = menuCategories.find(c => c.id === key)
+      return {
         '@type': 'MenuSection',
-        name: 'דגים',
-        hasMenuItem: []
-      },
-      {
-        '@type': 'MenuSection',
-        name: 'בשרים',
-        hasMenuItem: []
-      },
-      {
-        '@type': 'MenuSection',
-        name: 'פירות ים',
-        hasMenuItem: []
-      },
-      {
-        '@type': 'MenuSection',
-        name: 'ארוחות ילדים',
-        hasMenuItem: []
-      },
-      {
-        '@type': 'MenuSection',
-        name: 'סלטים',
-        hasMenuItem: []
-      },
-      {
-        '@type': 'MenuSection',
-        name: 'קינוחים',
-        hasMenuItem: []
-      },
-      {
-        '@type': 'MenuSection',
-        name: 'אלכוהול',
-        hasMenuItem: []
-      },
-      {
-        '@type': 'MenuSection',
-        name: 'יינות',
-        hasMenuItem: []
+        name: cat?.name ?? key,
+        hasMenuItem: menuData[key].map(item => ({
+          '@type': 'MenuItem',
+          name: item.name,
+          offers: {
+            '@type': 'Offer',
+            price: item.price,
+            priceCurrency: 'ILS',
+          },
+          ...(item.description ? { description: item.description } : {}),
+        })),
       }
-    ],
+    }),
     inLanguage: 'he',
     publisher: {
       '@type': 'Restaurant',

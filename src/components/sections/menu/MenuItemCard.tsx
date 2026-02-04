@@ -7,10 +7,9 @@ import type { MenuItem } from '@/types/menu'
 interface MenuItemCardProps {
   item: MenuItem
   index: number
-  categoryName?: string
 }
 
-export default function MenuItemCard({ item, index, categoryName }: MenuItemCardProps) {
+export default function MenuItemCard({ item, index }: MenuItemCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -20,22 +19,13 @@ export default function MenuItemCard({ item, index, categoryName }: MenuItemCard
     >
       {/* Menu Item Content */}
       <div className="flex justify-between items-start mb-3">
-        <h3 className="text-xl font-bold text-black pl-20">{item.name}</h3>
+        <h3 className="text-xl font-bold text-black">{item.name}</h3>
         <span className="text-2xl font-bold text-blue-primary whitespace-nowrap">
           {item.priceDisplay ?? `₪${item.price}`}
         </span>
       </div>
       {item.description && (
         <p className="text-gray-600 leading-relaxed">{item.description}</p>
-      )}
-
-      {/* Category Tag */}
-      {categoryName && (
-        <div className="mt-4 inline-block">
-          <span className="text-xs bg-blue-50 text-blue-primary px-3 py-1 rounded-full">
-            {categoryName}
-          </span>
-        </div>
       )}
 
       {/* Decorative Element */}

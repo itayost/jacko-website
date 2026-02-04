@@ -10,11 +10,13 @@ interface MenuGridProps {
   categories: MenuCategory[]
 }
 
+const SUBCATEGORY_ORDER: Record<string, number> = { 'אדום': 0, 'לבן': 1 }
+
 function getSubcategories(items: MenuItem[]): string[] {
   const subs = items
     .map(i => i.subcategory)
     .filter((s): s is string => typeof s === 'string')
-  return [...new Set(subs)]
+  return [...new Set(subs)].sort((a, b) => (SUBCATEGORY_ORDER[a] ?? 99) - (SUBCATEGORY_ORDER[b] ?? 99))
 }
 
 export default function MenuGrid({ menuData, selectedCategory, categories }: MenuGridProps) {

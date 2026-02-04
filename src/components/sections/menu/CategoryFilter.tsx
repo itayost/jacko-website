@@ -54,9 +54,10 @@ export default function CategoryFilter({
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => onCategoryChange(category.id as MenuCategoryId)}
+                  aria-current={selectedCategory === category.id ? 'true' : undefined}
                   className={`flex items-center gap-2 px-4 py-2 rounded-full font-medium text-sm transition-all ${
                     selectedCategory === category.id
-                      ? isSticky 
+                      ? isSticky
                         ? 'bg-blue-primary text-white shadow-lg'
                         : 'bg-yellow-accent text-black shadow-lg'
                       : isSticky
@@ -81,6 +82,7 @@ export default function CategoryFilter({
                 key={category.id}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => onCategoryChange(category.id as MenuCategoryId)}
+                aria-current={selectedCategory === category.id ? 'true' : undefined}
                 className={`flex items-center gap-2 px-4 py-2 rounded-full font-medium text-sm transition-all whitespace-nowrap ${
                   selectedCategory === category.id
                     ? isSticky 
