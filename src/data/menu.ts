@@ -41,6 +41,7 @@ export const menuData: MenuData = {
     { name: 'פרידה', price: 42, priceDisplay: '42 ₪ ל-100 גר׳' },
     { name: 'ברים', price: 39, priceDisplay: '39 ₪ ל-100 גר׳' },
     { name: 'אינטיאס', price: 39, priceDisplay: '39 ₪ ל-100 גר׳' },
+    { name: 'ביס של דייגים', price: 79, description: 'כריך דג על הגריל עטוף בג׳פטה קלויה ורטבים שמוזלים ישר ללב.\nבתוספת צ׳יפס, סלטון ירקות צ׳ימיצ׳ורי וטחינת הבית.' },
   ],
   meats: [
     { name: 'סטייק אנטריקוט', price: 170 },

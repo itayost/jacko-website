@@ -25,7 +25,7 @@ export default function MenuItemCard({ item, index }: MenuItemCardProps) {
         </span>
       </div>
       {item.description && (
-        <p className="text-gray-600 leading-relaxed">{item.description}</p>
+        <p className="text-gray-600 leading-relaxed whitespace-pre-line">{item.description}</p>
       )}
 
       {/* Decorative Element */}
