@@ -108,17 +108,26 @@ const Footer = () => {
       {/* Bottom Bar */}
       <div className="border-t border-white/20">
         <div className="container mx-auto px-4 py-4">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="text-sm text-white/60 text-center md:text-right">
-              © {currentYear} ג׳קו מאכלי ים. כל הזכויות שמורות.
+          <div className="flex flex-col items-center gap-3">
+            <div className="flex flex-wrap justify-center gap-x-4 gap-y-1 text-sm text-white/60">
+              <Link href="/accessibility" className="hover:text-yellow-accent transition-colors">הצהרת נגישות</Link>
+              <span>·</span>
+              <Link href="/privacy" className="hover:text-yellow-accent transition-colors">מדיניות פרטיות</Link>
+              <span>·</span>
+              <Link href="/cookies" className="hover:text-yellow-accent transition-colors">מדיניות קוקיז</Link>
             </div>
-            <div className="flex items-center gap-1 text-sm text-white/60">
-              <span>נבנה עם</span>
-              <Heart size={14} className="text-red-500" />
-              <span>על ידי</span>
-              <a href="https://ItayOst.com" target="_blank" className="text-yellow-accent hover:text-white transition-colors">
-                ItayOst
-              </a>
+            <div className="flex flex-col md:flex-row justify-between items-center gap-2 w-full">
+              <div className="text-sm text-white/60 text-center md:text-right">
+                © {currentYear} ג׳קו מאכלי ים. כל הזכויות שמורות.
+              </div>
+              <div className="flex items-center gap-1 text-sm text-white/60">
+                <span>נבנה עם</span>
+                <Heart size={14} className="text-red-500" />
+                <span>על ידי</span>
+                <a href="https://ItayOst.com" target="_blank" className="text-yellow-accent hover:text-white transition-colors">
+                  ItayOst
+                </a>
+              </div>
             </div>
           </div>
         </div>
