@@ -11,7 +11,6 @@ export const contactInfo: ContactInfo = {
     number: '09-8652878',
     whatsappAvailable: true
   },
-  email: 'info@jacko-seafood.co.il',
   hours: {
     weekdays: '12:00 - 22:30',
     friday: '12:00 - 23:00',

@@ -74,7 +74,6 @@ export default function PrivacyPage() {
               <li><strong>מסעדת ג׳קו - מסעדת דגים ומאכלי ים</strong></li>
               <li>כתובת: גיבורי ישראל 7, נתניה</li>
               <li>טלפון: <a href="tel:09-8652878" className="text-blue-primary hover:underline">09-8652878</a></li>
-              <li>דוא&quot;ל: <a href="mailto:info@jacko-seafood.co.il" className="text-blue-primary hover:underline">info@jacko-seafood.co.il</a></li>
             </ul>
           </div>
         </div>

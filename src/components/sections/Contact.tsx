@@ -4,7 +4,7 @@
 import { motion } from 'framer-motion'
 import SocialLinks from '@/components/sections/contact/SocialLinks'
 import { contactInfo } from '@/data/contact'
-import { Phone, MapPin, Clock, Mail } from 'lucide-react'
+import { Phone, MapPin, Clock } from 'lucide-react'
 
 const Contact = () => {
   return (
@@ -69,19 +69,6 @@ const Contact = () => {
                     <p>שישי: 12:00 - 23:00</p>
                     <p>שבת: 12:00 - 22:30</p>
                   </div>
-                </div>
-              </div>
-
-              {/* Email */}
-              <div className="flex items-start gap-4">
-                <div className="bg-blue-primary text-white p-3 rounded-full shrink-0">
-                  <Mail size={24} />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">אימייל</h3>
-                  <a href="mailto:info@jacko-seafood.co.il" className="text-gray-600 hover:text-blue-primary transition-colors">
-                    info@jacko-seafood.co.il
-                  </a>
                 </div>
               </div>
 

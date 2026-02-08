@@ -9,5 +9,4 @@ export const RESTAURANT_INFO = {
     friday: '12:00 - 23:00',
     saturday: '12:00 - 22:30',
   },
-  email: 'info@jacko-seafood.co.il',
 }

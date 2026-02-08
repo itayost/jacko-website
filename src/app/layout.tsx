@@ -130,7 +130,6 @@ export default function RootLayout({
     ],
     url: baseUrl,
     telephone: '+972-9-8652878',
-    email: 'info@jacko-seafood.co.il',
     priceRange: '₪₪₪',
     address: {
       '@type': 'PostalAddress',

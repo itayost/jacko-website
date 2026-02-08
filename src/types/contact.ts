@@ -10,7 +10,6 @@ export interface ContactInfo {
     number: string
     whatsappAvailable: boolean
   }
-  email: string
   hours: {
     weekdays: string
     friday: string
