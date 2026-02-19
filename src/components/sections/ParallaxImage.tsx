@@ -8,7 +8,7 @@ const ParallaxImage = () => {
       <div
         className="absolute inset-0 bg-center bg-no-repeat bg-cover md:bg-fixed"
         style={{
-          backgroundImage: 'url(/images/gallery/restaurant-view.webp)'
+          backgroundImage: 'url(/images/gallery/plating-landscape.webp)'
         }}
       />
 
