@@ -10,8 +10,7 @@ const heebo = Heebo({
   display: 'swap',
 })
 
-// Base URL for your website - update this to your actual domain
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://jacko-website-six.vercel.app/'
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://jacko.co.il'
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -75,7 +74,6 @@ export const metadata: Metadata = {
     canonical: baseUrl,
     languages: {
       'he-IL': baseUrl,
-      'en-US': `${baseUrl}/en`,
     },
   },
   
