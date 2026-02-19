@@ -9,7 +9,7 @@ const sections = [
   {
     image: '/images/gallery/restaurant-view.webp',
     title: 'מועדון לקוחות',
-    description: 'אם זה תלוי בנו, כבר היינו חברים. אז בואו נסגור את זה, מצטרפים למועדון ג\'קו נתניה ונהנים מהטבות והפתעות מהמטבח לפני כולם.',
+    description: 'אם זה תלוי בנו, כבר היינו חברים. אז בואו נסגור את זה, מצטרפים למועדון ג\'קו נתניה ונהנים מהטבות והפתעות מהמטבח לפני\u00A0כולם.',
     buttonText: 'הצטרפו עכשיו',
     buttonLink: 'https://valuecard.co.il/Forms/5BFB43BA-3A72-42EE-B9BF-1A3C24B06B47'
   },
