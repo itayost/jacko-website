@@ -66,9 +66,9 @@ const HeroSection = () => {
                   src={heroImages[currentImageIndex]}
                   alt="ג׳קו מסעדת דגים"
                   fill
+                  sizes="100vw"
                   className="object-cover"
                   priority={currentImageIndex === 0}
-                  quality={90}
                 />
               </motion.div>
             )}
