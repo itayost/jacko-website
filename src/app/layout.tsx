@@ -1,6 +1,7 @@
 // src/app/layout.tsx
 import type { Metadata } from 'next'
 import { Heebo } from 'next/font/google'
+import Script from 'next/script'
 import './globals.css'
 import Navigation from '@/components/layout/Navigation'
 import Footer from '@/components/layout/Footer'
@@ -195,6 +196,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <Script src="https://cdn.userway.org/widget.js" data-account="7ek953Xjr7" strategy="lazyOnload" />
       </body>
     </html>
   )
