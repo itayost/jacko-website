@@ -88,21 +88,21 @@ const Features = () => {
                   הסיפור שלנו
                 </h2>
 
-                <p className="text-lg md:text-xl leading-relaxed">
+                <p className="text-lg md:text-xl leading-relaxed text-balance">
                   הסיפור של ג&apos;קו הוא סיפור על משפחה, ים ומסורת קולינרית
                   שהפכה עם השנים לשם מוכר ואהוב בישראל.
                 </p>
-                <p className="text-lg md:text-xl leading-relaxed">
-                  בשנת 1976 הקימו שמחה וג&apos;קו אלאלוף את ג&apos;קו, מסעדת דגים ופירות ים
-                  שהתבססה על דגה טרייה, סלטים ביתיים ואירוח חם.
+                <p className="text-lg md:text-xl leading-relaxed text-balance">
+                  בשנת 1976 הקימו שמחה וג&apos;קו אלאלוף <span style={{whiteSpace:'nowrap'}}>את ג&apos;קו</span>, מסעדת דגים ופירות ים
+                  שהתבססה <span style={{whiteSpace:'nowrap'}}>על דגה</span> טרייה, סלטים ביתיים ואירוח חם.
                 </p>
-                <p className="text-lg md:text-xl leading-relaxed">
+                <p className="text-lg md:text-xl leading-relaxed text-balance">
                   במהרה הפכה ג&apos;קו למוסד ולנקודת מפגש קבועה של חובבי דגים, משפחות ובליינים,
-                  ושומרת על אותם ערכים: טריות, שפע, שירות אישי ואהבה אמיתית לים.
+                  ושומרת על אותם ערכים: טריות, שפע, <span style={{whiteSpace:'nowrap'}}>שירות אישי</span> ואהבה אמיתית לים.
                 </p>
-                <p className="text-lg md:text-xl leading-relaxed">
-                  מסעדת הדגים ג&apos;קו נתניה מכבדת את העבר, חיה את ההווה ומגישה מאכלי ים
-                  באותה הפשטות והנדיבות שבה הכל התחיל, ואתם מוזמנים.
+                <p className="text-lg md:text-xl leading-relaxed text-balance">
+                  מסעדת הדגים ג&apos;קו נתניה מכבדת את העבר, חיה את ההווה ומגישה מאכלי ים{' '}
+                  <span style={{whiteSpace:'nowrap'}}>באותה הפשטות</span> והנדיבות שבה הכל התחיל, <span style={{whiteSpace:'nowrap'}}>ואתם מוזמנים.</span>
                 </p>
               </div>
             </div>
