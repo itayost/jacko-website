@@ -70,7 +70,7 @@ export const menuData: MenuData = {
     { name: 'שניצל/שניצל דג וצ׳יפס', price: 65 },
   ],
   salads: [
-    { name: '8 סלטי הבית', price: 47, description: 'שמונה סלטי הבית מגיע עם פוקצ׳ה' },
+    { name: '8 סלטי הבית', price: 59, description: 'שמונה סלטי הבית מגיע עם פוקצ׳ה' },
   ],
   desserts: [
     { name: 'עוגת סולת אותנטית', price: 42, priceDisplay: '34/42 ₪', description: 'עוגת סולת אותנטית עם נגיעות סירופ פירות יער' },
