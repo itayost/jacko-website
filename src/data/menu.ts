@@ -1,8 +1,9 @@
 // src/data/menu.ts
-import type { MenuCategory, MenuData } from '@/types/menu'
+import type { BusinessMenu, MenuCategory, MenuData } from '@/types/menu'
 
 export const menuCategories: MenuCategory[] = [
   { id: 'all', name: 'הכל' },
+  { id: 'business', name: 'עסקיות' },
   {
     id: 'fish',
     name: 'דגים',
@@ -118,5 +119,39 @@ export const menuData: MenuData = {
     { name: 'שרדונה גמלא', price: 145, priceDisplay: '145/92/49 ₪', subcategory: 'לבן', description: 'Chardonnay Gamla' },
     { name: 'שרדונה רקנטי', price: 135, subcategory: 'לבן', description: 'Chardonnay Recanti' },
     { name: 'קווה', price: 125, subcategory: 'לבן', description: 'Cava' },
+  ],
+}
+
+export const businessMenu: BusinessMenu = {
+  days: 'א׳–ה׳',
+  hours: '12:00–17:00',
+  includes: 'כל העסקיות כוללות מגש של סלטי הבית וכוס מיץ אשכוליות אדומה / לימונדה / תה נענע / קפה בוץ.',
+  drinksNote: 'אפשר להמיר לכל שתייה קלה בתוספת 12 ₪ · מים מינרליים / סודה ב־8 ₪',
+  tiers: [
+    { price: 64, groups: [{ items: ['פסטה (ברוטב שמנת / עגבניות / רוזה)'] }] },
+    { price: 89, groups: [{ items: ['חזה עוף', 'פיש אנד צ׳יפס'] }] },
+    { price: 95, groups: [{ items: ['פרגית', 'שניצל'] }] },
+    {
+      price: 99,
+      groups: [
+        { title: 'דגים', items: ['מושט / קאטפיש'] },
+        { title: 'פירות ים', items: ['קלמרי', 'ראשי קלמרי', 'קלמרי וראשים'] },
+      ],
+    },
+    {
+      price: 104,
+      groups: [
+        { title: 'דגים', items: ['סלמון', 'טונה', 'בורי'] },
+        { title: 'פירות ים', items: ['שרימפס', 'גלאיה ל־1', 'אורז פירות ים', 'פסטה פירות ים', 'מרק פירות ים'] },
+      ],
+    },
+  ],
+  extras: [
+    { name: 'מלבי', price: 34 },
+    { name: 'עוגת סולת אותנטית', price: 34 },
+    { name: 'טרפלס', price: 36 },
+    { name: 'קרם ברולה', price: 36 },
+    { name: 'כוס יין', price: 34 },
+    { name: 'כוס שליש בירה מהחבית', price: 25 },
   ],
 }

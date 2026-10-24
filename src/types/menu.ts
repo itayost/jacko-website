@@ -26,4 +26,28 @@ export interface MenuData {
   wines: MenuItem[]
 }
 
-export type MenuCategoryId = 'all' | keyof MenuData
+export interface BusinessMenuGroup {
+  title?: string
+  items: string[]
+}
+
+export interface BusinessMenuTier {
+  price: number
+  groups: BusinessMenuGroup[]
+}
+
+export interface BusinessMenuExtra {
+  name: string
+  price: number
+}
+
+export interface BusinessMenu {
+  days: string
+  hours: string
+  includes: string
+  drinksNote: string
+  tiers: BusinessMenuTier[]
+  extras: BusinessMenuExtra[]
+}
+
+export type MenuCategoryId = 'all' | 'business' | keyof MenuData

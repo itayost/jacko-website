@@ -2,6 +2,7 @@
 'use client'
 
 import MenuItemCard from './MenuItemCard'
+import BusinessMenuSection from './BusinessMenuSection'
 import type { MenuItem, MenuCategory, MenuData, MenuCategoryId } from '@/types/menu'
 
 interface MenuGridProps {
@@ -73,6 +74,10 @@ export default function MenuGrid({ menuData, selectedCategory, categories }: Men
         </div>
       </section>
     )
+  }
+
+  if (selectedCategory === 'business') {
+    return <BusinessMenuSection />
   }
 
   // Single category view
